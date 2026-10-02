@@ -1,0 +1,72 @@
+/* جلوه‌های حرکتی سایت صنعت نوین معرق چرم */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(35px);
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-hover {
+  overflow: hidden;
+}
+
+.image-hover img {
+  transition: transform .7s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.06);
+}
+
+.gold-line {
+  position: relative;
+}
+
+.gold-line::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  margin-top: 14px;
+  background: #b8944a;
+  animation: lineGrow .8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 70px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}

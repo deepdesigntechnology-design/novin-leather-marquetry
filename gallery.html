@@ -4,32 +4,343 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>گالری آثار | صنعت نوین معرق چرم</title>
-<meta name="description" content="گالری آثار صنعت نوین معرق چرم، شامل نمونه‌های اجرایی، تکنیک‌های ترکیبی و آثار استاد افشین خلیلی.">
+<meta name="description" content="گالری آثار فاخر صنعت نوین معرق چرم — جعبه‌ها، جلدها و آثار استاد افشین خلیلی با تکنیک‌های معرق، بافت تریشه و قوام‌آوری.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/gallery.html">
+<meta property="og:title" content="گالری آثار | صنعت نوین معرق چرم">
+<meta property="og:description" content="نمونه‌های برجسته معرق چرم نوین">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/gallery.css">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --dark: #2C1810;
+  --med: #5C3A21;
+  --gold: #C9A227;
+  --light-gold: #E8D5A3;
+  --cream: #FBF5EB;
+  --soft: #6B4E3D;
+}
+body { background: var(--cream); }
+.page-hero {
+  background: linear-gradient(160deg, var(--dark) 0%, #3d2518 100%);
+  color: #fff;
+  text-align: center;
+  padding: 5.5rem 1.5rem 3.5rem;
+}
+.page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .6rem; }
+.page-hero p { color: var(--light-gold); max-width: 640px; margin: 0 auto; }
+
+/* Gallery Grid */
+.gallery-section { padding: 3.5rem 1.5rem 5rem; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card with strong effects */
+.gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(44,24,16,.12);
+  transition: all .4s cubic-bezier(.25,.8,.25,1);
+  cursor: pointer;
+  aspect-ratio: 4/3;
+}
+.gallery-item:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 22px 50px rgba(44,24,16,.25);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+  display: block;
+}
+.gallery-item:hover img {
+  transform: scale(1.12);
+}
+
+/* Overlay */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(44,24,16,.85) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity .4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.4rem;
+  color: #fff;
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+.gallery-overlay h3 {
+  font-size: 1.15rem;
+  margin-bottom: .3rem;
+  transform: translateY(12px);
+  transition: transform .4s ease;
+}
+.gallery-item:hover .gallery-overlay h3 {
+  transform: translateY(0);
+}
+.gallery-overlay p {
+  font-size: .88rem;
+  color: var(--light-gold);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all .4s ease .05s;
+}
+.gallery-item:hover .gallery-overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Placeholder style when no image yet */
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #3d2518, #5C3A21, #8B5A2B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Section titles */
+.gallery-cat {
+  max-width: 1200px;
+  margin: 0 auto 1.8rem;
+  padding: 0 1.5rem;
+}
+.gallery-cat h2 {
+  color: var(--dark);
+  font-size: 1.45rem;
+  border-right: 4px solid var(--gold);
+  padding-right: .9rem;
+  margin-bottom: .4rem;
+}
+.gallery-cat p { color: var(--soft); font-size: .95rem; }
+
+/* Lightbox modal */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20,10,5,.92);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+.lightbox.active { display: flex; }
+.lightbox img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  object-fit: contain;
+}
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  left: 1.5rem;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+}
+</style>
 </head>
 <body>
 <header class="site-header">
 <div class="container">
 <a href="index.html" class="logo"><strong>مرجع رسمی صنعت نوین معرق چرم</strong></a>
 <nav class="main-nav">
-<a href="index.html">خانه</a><a href="about.html">معرفی صنعت</a><a href="history.html">خاستگاه و هویت</a><a href="techniques.html">تکنیک‌ها</a><a href="education.html">آموزش</a><a href="artist.html">افشین خلیلی</a><a href="gallery.html" class="active">گالری آثار</a><a href="contact.html">ارتباط</a>
+<a href="index.html">خانه</a>
+<a href="about.html">معرفی صنعت</a>
+<a href="history.html">خاستگاه</a>
+<a href="techniques.html">تکنیک‌ها</a>
+<a href="education.html">آموزش</a>
+<a href="artist.html">افشین خلیلی</a>
+<a href="gallery.html" class="active">گالری آثار</a>
+<a href="contact.html">ارتباط</a>
 </nav>
 </div>
 </header>
-<main>
-<section class="page-hero"><div class="container"><h1>گالری آثار صنعت نوین معرق چرم</h1><p>مجموعه‌ای از آثار اجرایی، مطالعاتی و نمونه‌های آموزشی در حوزه معرق چرم نوین.</p></div></section>
-<section class="section"><div class="container"><div class="gallery-grid">
-<article class="gallery-card"><div class="image-placeholder">تصویر اثر</div><h3>آثار ترکیبی سوخت و معرق چرم</h3><p>پیوند تکنیک‌های سوخت چرم و ساختارهای معرق چرم.</p></article>
-<article class="gallery-card"><div class="image-placeholder">تصویر اثر</div><h3>اجرای موتیف</h3><p>اجرای قطعات چرمی بر اساس طراحی و الگوی تصویری.</p></article>
-<article class="gallery-card"><div class="image-placeholder">تصویر اثر</div><h3>پیچ یا بافت تریشه</h3><p>ساختارهای بافتی با نوارهای ظریف چرم طبیعی.</p></article>
-<article class="gallery-card"><div class="image-placeholder">تصویر اثر</div><h3>شیوه مطبق</h3><p>ساختارهای لایه‌ای و ایجاد عمق بصری.</p></article>
-<article class="gallery-card"><div class="image-placeholder">تصویر اثر</div><h3>نمونه‌های آموزشی</h3><p>تمرین‌ها و مراحل اجرایی آموزش رسمی معرق‌کار چرم.</p></article>
-<article class="gallery-card"><div class="image-placeholder">تصویر اثر</div><h3>پروژه‌های منتخب</h3><p>روند طراحی، اجرا و پرداخت نهایی آثار.</p></article>
-</div></div></section>
-</main>
-<footer class="site-footer"><div class="container"><p>گروه خلاقیت‌های تجسمی ایده — اصفهان</p></div></footer>
+
+<section class="page-hero">
+  <h1>گالری آثار صنعت نوین معرق چرم</h1>
+  <p>مجموعه‌ای از جعبه‌ها، جلدها و آثار فاخر اجراشده با تکنیک‌های معرق، بافت تریشه، قوام‌آوری و رزین زیرکار</p>
+</section>
+
+<div class="gallery-cat">
+  <h2>آثار منتخب</h2>
+  <p>نمونه‌های برجسته اجراشده توسط پدیدآورنده شیوه</p>
+</div>
+
+<section class="gallery-section">
+  <div class="gallery-grid" id="galleryGrid">
+
+    <!-- Item 1 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جعبه معرق چرم<br>با خوشنویسی</div>
+      <div class="gallery-overlay">
+        <h3>جعبه معرق با خطاطی</h3>
+        <p>اجرای موتیف + بافت تریشه + خال طلایی</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جلد کتاب و جعبه<br>مجموعه دو تکه</div>
+      <div class="gallery-overlay">
+        <h3>مجموعه جلد و جعبه</h3>
+        <p>ترکیب‌بندی کلاسیک ایرانی</p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جعبه گنبدی<br>با مشبک‌کاری</div>
+      <div class="gallery-overlay">
+        <h3>جعبه گنبدی مشبک</h3>
+        <p>تکنیک مشبک + بافت پیچیده</p>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جعبه باز<br>با تقدیم‌نامه</div>
+      <div class="gallery-overlay">
+        <h3>جعبه با تقدیم‌نامه داخلی</h3>
+        <p>اجرا روی زیرکار چوبی</p>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جزئیات سطح<br>خوشنویسی برجسته</div>
+      <div class="gallery-overlay">
+        <h3>جزئیات خوشنویسی</h3>
+        <p>خط ثلث + دورگیری طلایی</p>
+      </div>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جعبه قوسی<br>نمای کناری</div>
+      <div class="gallery-overlay">
+        <h3>جعبه قوسی سه‌بعدی</h3>
+        <p>شیوه مطبق + بافت تریشه</p>
+      </div>
+    </div>
+
+    <!-- Item 7 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جعبه با پایه<br>منبت‌گونه</div>
+      <div class="gallery-overlay">
+        <h3>جعبه پایه‌دار</h3>
+        <p>ترکیب معرق و ساختار حجمی</p>
+      </div>
+    </div>
+
+    <!-- Item 8 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جلد دیوان حافظ<br>با رنگ‌آمیزی</div>
+      <div class="gallery-overlay">
+        <h3>جلد دیوان حافظ</h3>
+        <p>رنگ‌آمیزی تخصصی + خال طلایی</p>
+      </div>
+    </div>
+
+    <!-- Item 9 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جعبه مستطیل<br>با حاشیه پیچیده</div>
+      <div class="gallery-overlay">
+        <h3>جعبه با حاشیه اسلیمی</h3>
+        <p>ترکیب‌بندی کلاسیک ترنج و حاشیه</p>
+      </div>
+    </div>
+
+    <!-- Item 10 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">مجموعه جلد<br>و جعبه بته‌جقه‌ای</div>
+      <div class="gallery-overlay">
+        <h3>مجموعه بته‌جقه</h3>
+        <p>نقش‌مایه سنتی ایرانی</p>
+      </div>
+    </div>
+
+    <!-- Item 11 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جعبه با نوشته<br>تقدیمی</div>
+      <div class="gallery-overlay">
+        <h3>جعبه تقدیمی</h3>
+        <p>خوشنویسی اختصاصی</p>
+      </div>
+    </div>
+
+    <!-- Item 12 -->
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <div class="img-placeholder">جلد کتاب<br>با قاب اسلیمی</div>
+      <div class="gallery-overlay">
+        <h3>جلد کتاب فاخر</h3>
+        <p>قاب اسلیمی + رنگ‌آمیزی چندلایه</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="اثر معرق چرم">
+</div>
+
+<footer class="site-footer">
+<div class="container">
+<p>گروه خلاقیت‌های تجسمی ایده — اصفهان</p>
+<p>پدیدآورنده شیوه: استاد افشین خلیلی</p>
+</div>
+</footer>
+
+<script>
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  if (img && img.src) {
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
+</script>
 </body>
 </html>

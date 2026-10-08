@@ -4,40 +4,265 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>گالری آثار | صنعت نوین معرق چرم</title>
-<meta name="description" content="گالری آثار فاخر صنعت نوین معرق چرم — جعبه‌ها، جلدها و آثار استاد افشین خلیلی با تکنیک‌های معرق، بافت تریشه و قوام‌آوری.">
+<meta name="description" content="گالری آثار فاخر صنعت نوین معرق چرم — جعبه‌ها، جلدها و آثار استاد افشین خلیلی">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/gallery.html">
 <meta property="og:title" content="گالری آثار | صنعت نوین معرق چرم">
 <meta property="og:description" content="نمونه‌های برجسته معرق چرم نوین">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--dark:#2C1810;--med:#5C3A21;--gold:#C9A227;--light-gold:#E8D5A3;--cream:#FBF5EB;--soft:#6B4E3D}
-body{background:var(--cream)}
-.page-hero{background:linear-gradient(160deg,var(--dark) 0%,#3d2518 100%);color:#fff;text-align:center;padding:5.5rem 1.5rem 3.5rem}
-.page-hero h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
-.page-hero p{color:var(--light-gold);max-width:640px;margin:0 auto}
-.gallery-section{padding:3rem 1.5rem 5rem}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;max-width:1240px;margin:0 auto}
-.gallery-item{position:relative;border-radius:16px;overflow:hidden;background:#1a100a;box-shadow:0 10px 30px rgba(44,24,16,.15);transition:all .4s cubic-bezier(.25,.8,.25,1);cursor:pointer;aspect-ratio:4/3}
-.gallery-item:hover{transform:translateY(-10px) scale(1.025);box-shadow:0 24px 55px rgba(44,24,16,.3)}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .65s ease;display:block}
-.gallery-item:hover img{transform:scale(1.13)}
-.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,24,16,.88) 0%,transparent 55%);opacity:0;transition:opacity .4s ease;display:flex;flex-direction:column;justify-content:flex-end;padding:1.35rem;color:#fff}
-.gallery-item:hover .gallery-overlay{opacity:1}
-.gallery-overlay h3{font-size:1.1rem;margin-bottom:.25rem;transform:translateY(14px);transition:transform .4s ease}
-.gallery-item:hover .gallery-overlay h3{transform:translateY(0)}
-.gallery-overlay p{font-size:.86rem;color:var(--light-gold);opacity:0;transform:translateY(12px);transition:all .4s ease .06s}
-.gallery-item:hover .gallery-overlay p{opacity:1;transform:translateY(0)}
-.gallery-cat{max-width:1240px;margin:0 auto 1.6rem;padding:0 1.5rem}
-.gallery-cat h2{color:var(--dark);font-size:1.4rem;border-right:4px solid var(--gold);padding-right:.85rem;margin-bottom:.35rem}
-.gallery-cat p{color:var(--soft);font-size:.94rem}
-.lightbox{position:fixed;inset:0;background:rgba(15,8,4,.94);z-index:9999;display:none;align-items:center;justify-content:center;padding:1.5rem}
-.lightbox.active{display:flex}
-.lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 20px 70px rgba(0,0,0,.55);object-fit:contain}
-.lightbox-close{position:absolute;top:1.2rem;left:1.5rem;background:var(--gold);color:var(--dark);border:none;width:44px;height:44px;border-radius:50%;font-size:1.5rem;cursor:pointer;font-weight:700;line-height:1}
-@media(max-width:600px){.gallery-grid{grid-template-columns:1fr;gap:1.15rem}}
+:root {
+  --dark: #1f120c;
+  --med: #4a2e1c;
+  --gold: #c9a227;
+  --light-gold: #e8d5a3;
+  --cream: #faf6f0;
+  --soft: #6b4e3d;
+  --card-bg: #2a1a12;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--cream); font-family: 'Vazirmatn', Tahoma, sans-serif; color: var(--dark); }
+
+/* Header inherits from style.css */
+
+/* Hero */
+.page-hero {
+  background: linear-gradient(165deg, #1a0f0a 0%, #2c1810 45%, #3d2518 100%);
+  color: #fff;
+  text-align: center;
+  padding: 6.5rem 1.5rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 30%, rgba(201,162,39,.12) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(201,162,39,.08) 0%, transparent 45%);
+}
+.page-hero h1 {
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  font-weight: 800;
+  margin-bottom: .7rem;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+.page-hero p {
+  color: var(--light-gold);
+  max-width: 580px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.8;
+  position: relative;
+}
+.hero-line {
+  width: 56px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin: 1.4rem auto 0;
+  border-radius: 2px;
+  position: relative;
+}
+
+/* Category */
+.gallery-cat {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2.8rem 1.5rem 0.8rem;
+}
+.gallery-cat h2 {
+  color: var(--dark);
+  font-size: 1.35rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+.gallery-cat h2::before {
+  content: '';
+  width: 4px;
+  height: 1.3em;
+  background: var(--gold);
+  border-radius: 2px;
+}
+.gallery-cat p {
+  color: var(--soft);
+  font-size: .92rem;
+  margin-top: .4rem;
+  margin-right: 1.1rem;
+}
+
+/* Gallery Grid - Masonry feel */
+.gallery-section {
+  padding: 1.5rem 1.5rem 5.5rem;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.4rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Card */
+.gallery-item {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: 0 8px 28px rgba(31,18,12,.12);
+  transition: transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease;
+  cursor: pointer;
+  aspect-ratio: 4 / 3.1;
+  border: 1px solid rgba(201,162,39,.08);
+}
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 50px rgba(31,18,12,.22);
+  border-color: rgba(201,162,39,.25);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .7s cubic-bezier(.22,1,.36,1);
+  display: block;
+}
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(20,10,5,.92) 0%, rgba(20,10,5,.4) 40%, transparent 70%);
+  opacity: 0;
+  transition: opacity .4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem 1.3rem;
+  color: #fff;
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+.gallery-overlay h3 {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: .3rem;
+  transform: translateY(16px);
+  transition: transform .4s cubic-bezier(.22,1,.36,1);
+  letter-spacing: -0.01em;
+}
+.gallery-item:hover .gallery-overlay h3 {
+  transform: translateY(0);
+}
+.gallery-overlay p {
+  font-size: .84rem;
+  color: var(--light-gold);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all .4s cubic-bezier(.22,1,.36,1) .06s;
+  font-weight: 300;
+}
+.gallery-item:hover .gallery-overlay p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Zoom icon hint */
+.zoom-hint {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 36px;
+  height: 36px;
+  background: rgba(201,162,39,.9);
+  color: var(--dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: scale(.7);
+  transition: all .35s ease;
+  font-weight: 700;
+}
+.gallery-item:hover .zoom-hint {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(12,6,3,.96);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  backdrop-filter: blur(8px);
+}
+.lightbox.active { display: flex; }
+.lightbox-inner {
+  position: relative;
+  max-width: 94vw;
+  max-height: 90vh;
+}
+.lightbox img {
+  max-width: 90vw;
+  max-height: 86vh;
+  border-radius: 10px;
+  box-shadow: 0 25px 80px rgba(0,0,0,.6);
+  object-fit: contain;
+  display: block;
+}
+.lightbox-close {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  background: var(--gold);
+  color: var(--dark);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.45rem;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 4px 16px rgba(0,0,0,.3);
+  transition: transform .2s, background .2s;
+}
+.lightbox-close:hover {
+  transform: scale(1.08);
+  background: #e0b83a;
+}
+.lightbox-caption {
+  text-align: center;
+  color: var(--light-gold);
+  margin-top: .9rem;
+  font-size: .95rem;
+  font-weight: 400;
+}
+
+/* Footer inherits */
+
+@media (max-width: 700px) {
+  .gallery-grid { grid-template-columns: 1fr; gap: 1.15rem; }
+  .page-hero { padding: 5.5rem 1.2rem 3rem; }
+  .lightbox-close { top: 12px; left: 12px; }
+}
 </style>
 </head>
 <body>
@@ -60,6 +285,7 @@ body{background:var(--cream)}
 <section class="page-hero">
   <h1>گالری آثار صنعت نوین معرق چرم</h1>
   <p>مجموعه‌ای از جعبه‌ها، جلدها و آثار فاخر اجراشده با تکنیک‌های معرق، بافت تریشه، قوام‌آوری و رزین زیرکار</p>
+  <div class="hero-line"></div>
 </section>
 
 <div class="gallery-cat">
@@ -71,122 +297,146 @@ body{background:var(--cream)}
   <div class="gallery-grid">
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/803702709_16083.jpg" alt="جعبه و جلد معرق چرم" loading="lazy">
+      <img src="assets/images/803702709_16083.jpg" alt="مجموعه جعبه و جلد" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>مجموعه جعبه و جلد</h3><p>ترکیب‌بندی کلاسیک ایرانی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/107930821_23262.jpg" alt="جعبه گنبدی معرق" loading="lazy">
+      <img src="assets/images/107930821_23262.jpg" alt="جعبه گنبدی مشبک" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه گنبدی مشبک</h3><p>تکنیک مشبک + بافت پیچیده</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/429938074_156143.jpg" alt="جعبه باز با تقدیم‌نامه" loading="lazy">
+      <img src="assets/images/429938074_156143.jpg" alt="جعبه با تقدیم‌نامه" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه با تقدیم‌نامه</h3><p>اجرا روی زیرکار چوبی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/431709818_129873.jpg" alt="جزئیات خوشنویسی" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جزئیات خوشنویسی</h3><p>خط ثلث + دورگیری طلایی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/431827353_130284.jpg" alt="جعبه باز نمای کامل" loading="lazy">
+      <img src="assets/images/431827353_130284.jpg" alt="جعبه باز — نمای کامل" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه باز — نمای کامل</h3><p>جزئیات داخلی و خارجی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/446530319_473513.jpg" alt="جلد دیوان حافظ" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جلد دیوان حافظ</h3><p>رنگ‌آمیزی تخصصی + خال طلایی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446706052_310224.jpg" alt="جعبه قوسی" loading="lazy">
+      <img src="assets/images/446706052_310224.jpg" alt="جعبه قوسی سه‌بعدی" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه قوسی سه‌بعدی</h3><p>شیوه مطبق + بافت تریشه</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446712527_410660.jpg" alt="جزئیات سطح" loading="lazy">
+      <img src="assets/images/446712527_410660.jpg" alt="جزئیات سطح معرق" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جزئیات سطح معرق</h3><p>بافت و قوام‌آوری</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446735698_439444.jpg" alt="جلد کتاب" loading="lazy">
+      <img src="assets/images/446735698_439444.jpg" alt="جلد کتاب فاخر" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جلد کتاب فاخر</h3><p>قاب اسلیمی + رنگ‌آمیزی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/446738183_478107.jpg" alt="نمای کناری جلد" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>نمای کناری جلد</h3><p>جزئیات عطف و ساختار</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446738833_407557.jpg" alt="جلد حافظ ایستاده" loading="lazy">
+      <img src="assets/images/446738833_407557.jpg" alt="جلد دیوان حافظ" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جلد دیوان حافظ</h3><p>نمای سه‌ربعی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/449011608_147089.jpg" alt="جعبه با حاشیه" loading="lazy">
+      <img src="assets/images/449011608_147089.jpg" alt="جعبه با حاشیه اسلیمی" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه با حاشیه اسلیمی</h3><p>ترکیب‌بندی کلاسیک</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/449014299_330604.jpg" alt="جعبه مستطیل" loading="lazy">
+      <img src="assets/images/449014299_330604.jpg" alt="جعبه مستطیل کامل" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه مستطیل کامل</h3><p>حاشیه پیچیده + ترنج</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/455226310_200831.jpg" alt="جعبه پایه‌دار" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه پایه‌دار</h3><p>ترکیب معرق و ساختار حجمی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/702220392_101227.jpg" alt="مجموعه بته‌جقه" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>مجموعه بته‌جقه</h3><p>نقش‌مایه سنتی ایرانی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/702415260_39675.jpg" alt="جعبه بته‌جقه" loading="lazy">
+      <img src="assets/images/702415260_39675.jpg" alt="جعبه با نقش بته‌جقه" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه با نقش بته‌جقه</h3><p>تکنیک معرق کامل</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/702429138_86703.jpg" alt="جلد با قاب" loading="lazy">
+      <img src="assets/images/702429138_86703.jpg" alt="جلد با قاب اسلیمی" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جلد با قاب اسلیمی</h3><p>خوشنویسی و رنگ‌آمیزی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/702429174_88333.jpg" alt="جزئیات قاب" loading="lazy">
+      <img src="assets/images/702429174_88333.jpg" alt="جزئیات قاب و خط" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جزئیات قاب و خط</h3><p>دورگیری طلایی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/7a9ae3456e7446b597ea0f17ad9a9645.jpg" alt="جعبه گنبدی کارگاه" loading="lazy">
+      <img src="assets/images/7a9ae3456e7446b597ea0f17ad9a9645.jpg" alt="جعبه گنبدی در کارگاه" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه گنبدی در کارگاه</h3><p>مشبک‌کاری پیچیده</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/802132071_37922.jpg" alt="جلد حافظ رنگی" loading="lazy">
+      <img src="assets/images/802132071_37922.jpg" alt="جلد حافظ با رنگ" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جلد حافظ با رنگ</h3><p>تذهیب و خوشنویسی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/802207873_106127.jpg" alt="جعبه با نوشته تقدیمی" loading="lazy">
+      <img src="assets/images/802207873_106127.jpg" alt="جعبه تقدیمی" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جعبه تقدیمی</h3><p>خوشنویسی اختصاصی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/802232502_37301.jpg" alt="جزئیات سطح جعبه" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>جزئیات سطح جعبه</h3><p>بافت و قوام نهایی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/802232593_38114.jpg" alt="نمای نزدیک معرق" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>نمای نزدیک معرق</h3><p>کیفیت اجرا و جزئیات</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
       <img src="assets/images/802332536_37709.jpg" alt="مجموعه آثار" loading="lazy">
+      <span class="zoom-hint">+</span>
       <div class="gallery-overlay"><h3>مجموعه آثار</h3><p>تنوع تکنیک و فرم</p></div>
     </div>
 
@@ -194,8 +444,11 @@ body{background:var(--cream)}
 </section>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="event.stopPropagation();closeLightbox()">×</button>
-  <img id="lightboxImg" src="" alt="اثر معرق چرم">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightboxImg" src="" alt="اثر معرق چرم">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
 </div>
 
 <footer class="site-footer">
@@ -208,8 +461,10 @@ body{background:var(--cream)}
 <script>
 function openLightbox(el) {
   const img = el.querySelector('img');
+  const title = el.querySelector('.gallery-overlay h3')?.textContent || '';
   if (img && img.src) {
     document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxCaption').textContent = title;
     document.getElementById('lightbox').classList.add('active');
     document.body.style.overflow = 'hidden';
   }

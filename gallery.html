@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>گالری آثار | صنعت نوین معرق چرم</title>
-<meta name="description" content="گالری آثار فاخر صنعت نوین معرق چرم — جعبه‌ها، جلدها و آثار استاد افشین خلیلی">
+<meta name="description" content="گالری آثار فاخر صنعت نوین معرق چرم — جعبه‌ها، جلدها و آثار استاد افشین خلیلی با تکنیک‌های معرق، بافت تریشه و قوام‌آوری.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/gallery.html">
+<meta property="og:title" content="گالری آثار | صنعت نوین معرق چرم">
+<meta property="og:description" content="نمونه‌های برجسته معرق چرم نوین">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap" rel="stylesheet">
@@ -16,27 +18,26 @@ body{background:var(--cream)}
 .page-hero{background:linear-gradient(160deg,var(--dark) 0%,#3d2518 100%);color:#fff;text-align:center;padding:5.5rem 1.5rem 3.5rem}
 .page-hero h1{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.6rem}
 .page-hero p{color:var(--light-gold);max-width:640px;margin:0 auto}
-.gallery-section{padding:3.5rem 1.5rem 5rem}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.6rem;max-width:1200px;margin:0 auto}
-.gallery-item{position:relative;border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 10px 30px rgba(44,24,16,.12);transition:all .4s cubic-bezier(.25,.8,.25,1);cursor:pointer;aspect-ratio:4/3}
-.gallery-item:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 22px 50px rgba(44,24,16,.25)}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease;display:block}
-.gallery-item:hover img{transform:scale(1.12)}
-.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,24,16,.85) 0%,transparent 55%);opacity:0;transition:opacity .4s ease;display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem;color:#fff}
+.gallery-section{padding:3rem 1.5rem 5rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;max-width:1240px;margin:0 auto}
+.gallery-item{position:relative;border-radius:16px;overflow:hidden;background:#1a100a;box-shadow:0 10px 30px rgba(44,24,16,.15);transition:all .4s cubic-bezier(.25,.8,.25,1);cursor:pointer;aspect-ratio:4/3}
+.gallery-item:hover{transform:translateY(-10px) scale(1.025);box-shadow:0 24px 55px rgba(44,24,16,.3)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .65s ease;display:block}
+.gallery-item:hover img{transform:scale(1.13)}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(44,24,16,.88) 0%,transparent 55%);opacity:0;transition:opacity .4s ease;display:flex;flex-direction:column;justify-content:flex-end;padding:1.35rem;color:#fff}
 .gallery-item:hover .gallery-overlay{opacity:1}
-.gallery-overlay h3{font-size:1.15rem;margin-bottom:.3rem;transform:translateY(12px);transition:transform .4s ease}
+.gallery-overlay h3{font-size:1.1rem;margin-bottom:.25rem;transform:translateY(14px);transition:transform .4s ease}
 .gallery-item:hover .gallery-overlay h3{transform:translateY(0)}
-.gallery-overlay p{font-size:.88rem;color:var(--light-gold);opacity:0;transform:translateY(10px);transition:all .4s ease .05s}
+.gallery-overlay p{font-size:.86rem;color:var(--light-gold);opacity:0;transform:translateY(12px);transition:all .4s ease .06s}
 .gallery-item:hover .gallery-overlay p{opacity:1;transform:translateY(0)}
-.img-placeholder{width:100%;height:100%;background:linear-gradient(135deg,#3d2518,#5C3A21,#8B5A2B);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.05rem;font-weight:500;text-align:center;padding:1rem}
-.gallery-cat{max-width:1200px;margin:0 auto 1.8rem;padding:0 1.5rem}
-.gallery-cat h2{color:var(--dark);font-size:1.45rem;border-right:4px solid var(--gold);padding-right:.9rem;margin-bottom:.4rem}
-.gallery-cat p{color:var(--soft);font-size:.95rem}
-.lightbox{position:fixed;inset:0;background:rgba(20,10,5,.92);z-index:9999;display:none;align-items:center;justify-content:center;padding:1.5rem}
+.gallery-cat{max-width:1240px;margin:0 auto 1.6rem;padding:0 1.5rem}
+.gallery-cat h2{color:var(--dark);font-size:1.4rem;border-right:4px solid var(--gold);padding-right:.85rem;margin-bottom:.35rem}
+.gallery-cat p{color:var(--soft);font-size:.94rem}
+.lightbox{position:fixed;inset:0;background:rgba(15,8,4,.94);z-index:9999;display:none;align-items:center;justify-content:center;padding:1.5rem}
 .lightbox.active{display:flex}
-.lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 20px 60px rgba(0,0,0,.5);object-fit:contain}
-.lightbox-close{position:absolute;top:1.2rem;left:1.5rem;background:var(--gold);color:var(--dark);border:none;width:42px;height:42px;border-radius:50%;font-size:1.4rem;cursor:pointer;font-weight:700}
-@media(max-width:600px){.gallery-grid{grid-template-columns:1fr;gap:1.2rem}}
+.lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;box-shadow:0 20px 70px rgba(0,0,0,.55);object-fit:contain}
+.lightbox-close{position:absolute;top:1.2rem;left:1.5rem;background:var(--gold);color:var(--dark);border:none;width:44px;height:44px;border-radius:50%;font-size:1.5rem;cursor:pointer;font-weight:700;line-height:1}
+@media(max-width:600px){.gallery-grid{grid-template-columns:1fr;gap:1.15rem}}
 </style>
 </head>
 <body>
@@ -62,54 +63,138 @@ body{background:var(--cream)}
 </section>
 
 <div class="gallery-cat">
-  <h2>آثار منتخب (نسخه کم‌حجم)</h2>
-  <p>نمونه‌های اعمال‌شده از آثار استاد افشین خلیلی</p>
+  <h2>آثار منتخب</h2>
+  <p>نمونه‌های واقعی اجراشده توسط پدیدآورنده شیوه — استاد افشین خلیلی</p>
 </div>
 
 <section class="gallery-section">
-  <div class="gallery-grid" id="galleryGrid">
+  <div class="gallery-grid">
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/box-open-1.jpg" alt="جعبه باز معرق چرم" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="img-placeholder" style="display:none">جعبه باز با تقدیم‌نامه</div>
-      <div class="gallery-overlay"><h3>جعبه باز با تقدیم‌نامه</h3><p>اجرا روی زیرکار چوبی</p></div>
+      <img src="assets/images/803702709_16083.jpg" alt="جعبه و جلد معرق چرم" loading="lazy">
+      <div class="gallery-overlay"><h3>مجموعه جعبه و جلد</h3><p>ترکیب‌بندی کلاسیک ایرانی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/box-open-2.jpg" alt="جعبه باز معرق" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="img-placeholder" style="display:none">جعبه باز - نمای دیگر</div>
-      <div class="gallery-overlay"><h3>جعبه باز - نمای کامل</h3><p>جزئیات داخلی و خارجی</p></div>
+      <img src="assets/images/107930821_23262.jpg" alt="جعبه گنبدی معرق" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه گنبدی مشبک</h3><p>تکنیک مشبک + بافت پیچیده</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/box-arched.jpg" alt="جعبه قوسی" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="img-placeholder" style="display:none">جعبه قوسی پایه‌دار</div>
-      <div class="gallery-overlay"><h3>جعبه قوسی پایه‌دار</h3><p>ساختار حجمی + بافت تریشه</p></div>
+      <img src="assets/images/429938074_156143.jpg" alt="جعبه باز با تقدیم‌نامه" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه با تقدیم‌نامه</h3><p>اجرا روی زیرکار چوبی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/hafez-book.jpg" alt="جلد دیوان حافظ" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="img-placeholder" style="display:none">جلد دیوان حافظ</div>
+      <img src="assets/images/431709818_129873.jpg" alt="جزئیات خوشنویسی" loading="lazy">
+      <div class="gallery-overlay"><h3>جزئیات خوشنویسی</h3><p>خط ثلث + دورگیری طلایی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/431827353_130284.jpg" alt="جعبه باز نمای کامل" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه باز — نمای کامل</h3><p>جزئیات داخلی و خارجی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446530319_473513.jpg" alt="جلد دیوان حافظ" loading="lazy">
       <div class="gallery-overlay"><h3>جلد دیوان حافظ</h3><p>رنگ‌آمیزی تخصصی + خال طلایی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/hafez-detail.jpg" alt="جزئیات جلد حافظ" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="img-placeholder" style="display:none">جزئیات جلد حافظ</div>
-      <div class="gallery-overlay"><h3>جزئیات جلد حافظ</h3><p>خوشنویسی و دورگیری</p></div>
+      <img src="assets/images/446706052_310224.jpg" alt="جعبه قوسی" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه قوسی سه‌بعدی</h3><p>شیوه مطبق + بافت تریشه</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/hafez-side.jpg" alt="نمای کناری جلد" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="img-placeholder" style="display:none">نمای کناری جلد</div>
+      <img src="assets/images/446712527_410660.jpg" alt="جزئیات سطح" loading="lazy">
+      <div class="gallery-overlay"><h3>جزئیات سطح معرق</h3><p>بافت و قوام‌آوری</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446735698_439444.jpg" alt="جلد کتاب" loading="lazy">
+      <div class="gallery-overlay"><h3>جلد کتاب فاخر</h3><p>قاب اسلیمی + رنگ‌آمیزی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446738183_478107.jpg" alt="نمای کناری جلد" loading="lazy">
       <div class="gallery-overlay"><h3>نمای کناری جلد</h3><p>جزئیات عطف و ساختار</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446738833_407557.jpg" alt="جلد حافظ ایستاده" loading="lazy">
+      <div class="gallery-overlay"><h3>جلد دیوان حافظ</h3><p>نمای سه‌ربعی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/449011608_147089.jpg" alt="جعبه با حاشیه" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه با حاشیه اسلیمی</h3><p>ترکیب‌بندی کلاسیک</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/449014299_330604.jpg" alt="جعبه مستطیل" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه مستطیل کامل</h3><p>حاشیه پیچیده + ترنج</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/455226310_200831.jpg" alt="جعبه پایه‌دار" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه پایه‌دار</h3><p>ترکیب معرق و ساختار حجمی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702220392_101227.jpg" alt="مجموعه بته‌جقه" loading="lazy">
+      <div class="gallery-overlay"><h3>مجموعه بته‌جقه</h3><p>نقش‌مایه سنتی ایرانی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702415260_39675.jpg" alt="جعبه بته‌جقه" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه با نقش بته‌جقه</h3><p>تکنیک معرق کامل</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702429138_86703.jpg" alt="جلد با قاب" loading="lazy">
+      <div class="gallery-overlay"><h3>جلد با قاب اسلیمی</h3><p>خوشنویسی و رنگ‌آمیزی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702429174_88333.jpg" alt="جزئیات قاب" loading="lazy">
+      <div class="gallery-overlay"><h3>جزئیات قاب و خط</h3><p>دورگیری طلایی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/7a9ae3456e7446b597ea0f17ad9a9645.jpg" alt="جعبه گنبدی کارگاه" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه گنبدی در کارگاه</h3><p>مشبک‌کاری پیچیده</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802132071_37922.jpg" alt="جلد حافظ رنگی" loading="lazy">
+      <div class="gallery-overlay"><h3>جلد حافظ با رنگ</h3><p>تذهیب و خوشنویسی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802207873_106127.jpg" alt="جعبه با نوشته تقدیمی" loading="lazy">
+      <div class="gallery-overlay"><h3>جعبه تقدیمی</h3><p>خوشنویسی اختصاصی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802232502_37301.jpg" alt="جزئیات سطح جعبه" loading="lazy">
+      <div class="gallery-overlay"><h3>جزئیات سطح جعبه</h3><p>بافت و قوام نهایی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802232593_38114.jpg" alt="نمای نزدیک معرق" loading="lazy">
+      <div class="gallery-overlay"><h3>نمای نزدیک معرق</h3><p>کیفیت اجرا و جزئیات</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802332536_37709.jpg" alt="مجموعه آثار" loading="lazy">
+      <div class="gallery-overlay"><h3>مجموعه آثار</h3><p>تنوع تکنیک و فرم</p></div>
     </div>
 
   </div>
 </section>
 
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-close" onclick="event.stopPropagation();closeLightbox()">×</button>
   <img id="lightboxImg" src="" alt="اثر معرق چرم">
 </div>
 
@@ -123,13 +208,15 @@ body{background:var(--cream)}
 <script>
 function openLightbox(el) {
   const img = el.querySelector('img');
-  if (img && img.src && img.style.display !== 'none') {
+  if (img && img.src) {
     document.getElementById('lightboxImg').src = img.src;
     document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 }
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>

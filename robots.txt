@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deepdesigntechnology-design.github.io/novin-leather-marquetry/sitemap.xml

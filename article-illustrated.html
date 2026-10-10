@@ -4,76 +4,236 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>مقاله مصوری | صنعت نوین معرق چرم</title>
-<meta name="description" content="مقاله مصوری صنعت نوین معرق چرم با تصاویر برجسته آثار استاد افشین خلیلی و توضیحات کامل هر اثر">
+<meta name="description" content="مقاله مصوری هنری صنعت نوین معرق چرم با تصاویر برجسته آثار استاد افشین خلیلی و توضیحات جامع فنی و هنری">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/article-illustrated.html">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Vazirmatn:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --dark: #1f120c;
-  --med: #4a2e1c;
+  --dark: #1a0f0a;
+  --med: #3d2518;
   --gold: #c9a227;
   --light-gold: #e8d5a3;
-  --cream: #faf6f0;
+  --cream: #f8f1e7;
   --soft: #6b4e3d;
+  --card: #fffdf9;
 }
-body { background: var(--cream); font-family: 'Vazirmatn', Tahoma, sans-serif; color: var(--dark); line-height: 1.9; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--cream);
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  color: var(--dark);
+  line-height: 1.95;
+  overflow-x: hidden;
+}
+
+/* Hero Artistic */
 .page-hero {
-  background: linear-gradient(165deg, #1a0f0a 0%, #2c1810 50%, #3d2518 100%);
+  background: linear-gradient(160deg, #120c08 0%, #2c1810 40%, #4a2e1c 100%);
   color: #fff;
   text-align: center;
-  padding: 6rem 1.5rem 3.5rem;
-}
-.page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: .6rem; }
-.page-hero p { color: var(--light-gold); max-width: 620px; margin: 0 auto; font-weight: 300; }
-.article-wrap { max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
-.article-intro { font-size: 1.08rem; color: var(--soft); margin-bottom: 3rem; text-align: justify; }
-.figure {
-  margin: 3.2rem 0;
-  background: #fff;
-  border-radius: 16px;
+  padding: 7.5rem 1.5rem 4.5rem;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(31,18,12,.1);
-  border: 1px solid rgba(201,162,39,.12);
 }
-.figure img {
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(201,162,39,.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(201,162,39,.1) 0%, transparent 40%);
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 80px;
+  background: linear-gradient(to top, var(--cream), transparent);
+}
+.page-hero h1 {
+  font-family: 'Amiri', serif;
+  font-size: clamp(2rem, 5vw, 3.1rem);
+  font-weight: 700;
+  margin-bottom: .8rem;
+  position: relative;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 20px rgba(0,0,0,.3);
+}
+.page-hero .subtitle {
+  font-family: 'Vazirmatn', sans-serif;
+  color: var(--light-gold);
+  max-width: 580px;
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: 1.1rem;
+  position: relative;
+}
+.hero-ornament {
+  width: 70px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.6rem auto 0;
+  position: relative;
+  border-radius: 2px;
+}
+
+/* Article Body */
+.article-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 5.5rem;
+}
+.article-intro {
+  font-size: 1.12rem;
+  color: var(--soft);
+  margin-bottom: 3.5rem;
+  text-align: justify;
+  background: var(--card);
+  padding: 1.8rem 2rem;
+  border-radius: 16px;
+  border-right: 5px solid var(--gold);
+  box-shadow: 0 8px 30px rgba(31,18,12,.06);
+  font-weight: 400;
+}
+.article-intro strong {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* Figure Cards - Artistic */
+.figure {
+  margin: 4rem 0;
+  background: var(--card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 50px rgba(31,18,12,.12);
+  border: 1px solid rgba(201,162,39,.15);
+  transition: transform .5s cubic-bezier(.22,1,.36,1), box-shadow .5s ease;
+  position: relative;
+}
+.figure:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(31,18,12,.2);
+}
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  max-height: 540px;
+}
+.img-wrap img {
   width: 100%;
-  height: auto;
-  display: block;
-  max-height: 520px;
+  height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform .8s cubic-bezier(.22,1,.36,1);
+}
+.figure:hover .img-wrap img {
+  transform: scale(1.06);
+}
+.img-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,15,10,.55) 0%, transparent 45%);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.figure:hover .img-wrap::after {
+  opacity: 1;
+}
+.figure-number {
+  position: absolute;
+  top: 1.3rem;
+  right: 1.3rem;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--gold), #a8841a);
+  color: var(--dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Amiri', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(0,0,0,.25);
+  z-index: 2;
 }
 .figure-caption {
-  padding: 1.6rem 1.8rem 1.9rem;
+  padding: 2rem 2.2rem 2.3rem;
 }
 .figure-caption h3 {
-  font-size: 1.25rem;
+  font-family: 'Amiri', serif;
+  font-size: 1.55rem;
   font-weight: 700;
   color: var(--dark);
-  margin-bottom: .7rem;
-  border-right: 4px solid var(--gold);
-  padding-right: .8rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.figure-caption .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-bottom: 1.1rem;
+}
+.figure-caption .tech-tags span {
+  background: rgba(201,162,39,.12);
+  color: var(--med);
+  font-size: .78rem;
+  padding: .28rem .75rem;
+  border-radius: 20px;
+  font-weight: 500;
+  border: 1px solid rgba(201,162,39,.25);
 }
 .figure-caption p {
-  font-size: .98rem;
+  font-size: 1.02rem;
   color: var(--soft);
   text-align: justify;
   margin: 0;
+  font-weight: 400;
 }
+
+/* End Box */
 .article-end {
-  margin-top: 3.5rem;
-  padding: 1.8rem;
-  background: linear-gradient(135deg, #2c1810, #3d2518);
+  margin-top: 4.5rem;
+  padding: 2.4rem 2rem;
+  background: linear-gradient(145deg, #1a0f0a, #3d2518);
   color: #fff;
-  border-radius: 14px;
+  border-radius: 18px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.article-end a { color: var(--gold); text-decoration: none; font-weight: 600; }
-@media (max-width: 600px) {
-  .figure-caption { padding: 1.3rem 1.2rem; }
-  .figure-caption h3 { font-size: 1.12rem; }
+.article-end::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(201,162,39,.15), transparent 60%);
+}
+.article-end p { position: relative; }
+.article-end a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s;
+}
+.article-end a:hover { border-color: var(--gold); }
+.article-end .credit {
+  margin-top: .9rem;
+  font-size: .9rem;
+  opacity: .8;
+  font-weight: 300;
+}
+
+@media (max-width: 650px) {
+  .page-hero { padding: 5.5rem 1.2rem 3.5rem; }
+  .figure-caption { padding: 1.5rem 1.3rem 1.7rem; }
+  .figure-caption h3 { font-size: 1.3rem; }
+  .article-intro { padding: 1.4rem 1.3rem; font-size: 1.02rem; }
 }
 </style>
 </head>
@@ -94,61 +254,98 @@ body { background: var(--cream); font-family: 'Vazirmatn', Tahoma, sans-serif; c
 
 <section class="page-hero">
   <h1>مقاله مصوری صنعت نوین معرق چرم</h1>
-  <p>نگاهی به آثار برجسته و تکنیک‌های اجرایی پدیدآورنده شیوه — استاد افشین خلیلی</p>
+  <p class="subtitle">نگاهی هنری و فنی به آثار برجسته پدیدآورنده شیوه — استاد افشین خلیلی</p>
+  <div class="hero-ornament"></div>
 </section>
 
 <div class="article-wrap">
   <p class="article-intro">
-    صنعت نوین معرق چرم، شیوه‌ای مستقل و نظام‌مند در حوزه صنایع دستی چرمی است که بر پایه طراحی دقیق، برش چرم طبیعی کفی، اجرای موتیف‌ها، بافت/پیچ تریشه، قوام‌آوری و روسازی شکل گرفته است. در این مقاله مصوری، چهار اثر برجسته از مجموعه آثار این صنعت معرفی می‌شود تا خواننده با ویژگی‌های بصری، فنی و هنری هر قطعه آشنا گردد.
+    <strong>صنعت نوین معرق چرم</strong> شیوه‌ای مستقل، نظام‌مند و کاملاً معاصر در حوزه صنایع دستی چرمی ایران است. این صنعت بر پایه طراحی دقیق، برش چرم طبیعی کفی (گاوی و شتری)، اجرای موتیف‌ها، بافت و پیچ تریشه، قوام‌آوری با رزین زیرکار، رنگ‌آمیزی تخصصی و روسازی نهایی شکل گرفته است. در این مقاله مصوری، چهار اثر برجسته از مجموعه آثار این صنعت با نگاهی فنی و هنری بررسی می‌شود تا ابعاد پنهان هر قطعه برای مخاطب آشکار گردد.
   </p>
 
   <!-- تصویر ۱ -->
   <figure class="figure">
-    <img src="assets/images/803702709_16083.jpg" alt="مجموعه جعبه و جلد معرق چرم" loading="lazy">
+    <div class="img-wrap">
+      <span class="figure-number">۱</span>
+      <img src="assets/images/803702709_16083.jpg" alt="مجموعه جعبه و جلد معرق چرم" loading="lazy">
+    </div>
     <figcaption class="figure-caption">
-      <h3>۱. مجموعه جعبه و جلد با ترکیب‌بندی کلاسیک ایرانی</h3>
+      <h3>مجموعه جعبه و جلد با ترکیب‌بندی کلاسیک ایرانی</h3>
+      <div class="tech-tags">
+        <span>ترنج و لچک</span>
+        <span>بافت تریشه</span>
+        <span>دورگیری طلایی</span>
+        <span>رزین زیرکار</span>
+      </div>
       <p>
-        این مجموعه یکی از شاخص‌ترین نمونه‌های صنعت نوین معرق چرم است. جعبه و جلد با بهره‌گیری از ترکیب‌بندی کلاسیک ایرانی (ترنج مرکزی، لچک، گوشه و حاشیه) طراحی شده‌اند. چرم کفی طبیعی پس از برش دقیق، با تکنیک بافت/پیچ تریشه و دورگیری طلایی اجرا شده و سطح کار با قوام‌آوری و رزین زیرکار تثبیت گردیده است. هماهنگی رنگ‌های قهوه‌ای گرم و طلایی، عمق و اصالت اثر را دوچندان کرده است. این قطعه نشان‌دهنده قابلیت اجرای همزمان موتیف‌های پیچیده و ساختار حجمی در یک مجموعه هماهنگ است.
+        این مجموعه یکی از کامل‌ترین و شاخص‌ترین نمونه‌های صنعت نوین معرق چرم به‌شمار می‌رود. طراحی بر اساس ترکیب‌بندی کلاسیک ایرانی انجام شده است: ترنج در مرکز، لچک‌ها در چهار گوشه، حاشیه پیوسته و گوشه‌سازی دقیق. چرم کفی طبیعی پس از الگوسازی و برش بسیار دقیق، با تکنیک بافت/پیچ تریشه در فواصل نقوش اجرا شده و سپس با دورگیری طلایی و خال‌زنی تزئین گردیده است. مرحله قوام‌آوری و اعمال رزین زیرکار (فرمول ابداعی چسب چوب و آب به نسبت ۱ به ۶) استحکام و ماندگاری سطح را تضمین کرده است. هماهنگی رنگ‌های قهوه‌ای گرم، طلایی و بافت طبیعی چرم، عمق بصری و حس اصالت را به اثر بخشیده و نشان می‌دهد که این صنعت قادر به تولید مجموعه‌های هماهنگ و فاخر است.
       </p>
     </figcaption>
   </figure>
 
   <!-- تصویر ۲ -->
   <figure class="figure">
-    <img src="assets/images/107930821_23262.jpg" alt="جعبه گنبدی مشبک معرق چرم" loading="lazy">
+    <div class="img-wrap">
+      <span class="figure-number">۲</span>
+      <img src="assets/images/107930821_23262.jpg" alt="جعبه گنبدی مشبک معرق چرم" loading="lazy">
+    </div>
     <figcaption class="figure-caption">
-      <h3>۲. جعبه گنبدی با تکنیک مشبک و بافت پیچیده</h3>
+      <h3>جعبه گنبدی با تکنیک مشبک و بافت پیچیده</h3>
+      <div class="tech-tags">
+        <span>مشبک‌کاری</span>
+        <span>سطح منحنی</span>
+        <span>بافت تریشه</span>
+        <span>ساختار حجمی</span>
+      </div>
       <p>
-        جعبه گنبدی یکی از فرم‌های چالش‌برانگیز در صنعت نوین معرق چرم است. در این اثر، سطح منحنی گنبد با قطعات چرم برش‌خورده و تکنیک مشبک‌کاری پوشانده شده و بافت تریشه به‌صورت پیوسته و دقیق در فواصل نقوش اجرا گردیده است. ساختار سه‌بعدی جعبه نیازمند مهارت بالا در الگوسازی و انتقال طرح روی سطوح غیرتخت است. استفاده از چرم کفی ضخیم، استحکام و ماندگاری اثر را تضمین کرده و جزئیات ظریف مشبک، عمق بصری ویژه‌ای به کار بخشیده است.
+        جعبه گنبدی از فرم‌های چالش‌برانگیز و هنرمندانه در صنعت نوین معرق چرم است. سطح منحنی گنبد نیازمند الگوسازی دقیق و انتقال طرح روی سطوح غیرتخت است؛ کاری که تنها با مهارت بالا در طراحی و برش امکان‌پذیر می‌شود. در این اثر، قطعات چرم با تکنیک مشبک‌کاری کنار هم چیده شده و بافت تریشه به‌صورت پیوسته و یکدست در فواصل نقوش اجرا گردیده است. استفاده از چرم کفی ضخیم، استحکام ساختاری جعبه را تأمین کرده و جزئیات ظریف مشبک، عمق و بازی نور و سایه ویژه‌ای به سطح کار بخشیده است. این قطعه نمونه‌ای ممتاز از تلفیق فرم سه‌بعدی با تکنیک‌های تخت معرق است و توانایی صنعت نوین معرق چرم در عبور از محدودیت‌های سطوح تخت را به‌خوبی نشان می‌دهد.
       </p>
     </figcaption>
   </figure>
 
   <!-- تصویر ۳ -->
   <figure class="figure">
-    <img src="assets/images/429938074_156143.jpg" alt="جعبه باز با تقدیم‌نامه داخلی" loading="lazy">
+    <div class="img-wrap">
+      <span class="figure-number">۳</span>
+      <img src="assets/images/429938074_156143.jpg" alt="جعبه باز با تقدیم‌نامه داخلی" loading="lazy">
+    </div>
     <figcaption class="figure-caption">
-      <h3>۳. جعبه باز با تقدیم‌نامه و جزئیات داخلی</h3>
+      <h3>جعبه باز با تقدیم‌نامه و کیفیت اجرای داخلی</h3>
+      <div class="tech-tags">
+        <span>تقدیم‌نامه</span>
+        <span>خوشنویسی</span>
+        <span>قوام‌آوری دوطرفه</span>
+        <span>کاربردی-هنری</span>
+      </div>
       <p>
-        این تصویر نمای باز جعبه را نشان می‌دهد که امکان مشاهده کیفیت اجرای داخلی و تقدیم‌نامه را فراهم می‌کند. در صنعت نوین معرق چرم، توجه به هر دو سطح خارجی و داخلی اثر از اصول مهم است. تقدیم‌نامه با خوشنویسی دقیق و دورگیری طلایی اجرا شده و سطح داخلی با همان دقت سطح خارجی قوام‌آوری و تثبیت شده است. این اثر نمونه‌ای موفق از تلفیق کارکرد کاربردی (جعبه) با ارزش هنری و یادمانی است و نشان می‌دهد که صنعت نوین معرق چرم صرفاً تزئینی نیست، بلکه قابلیت تولید اشیای کاربردی نفیس را نیز دارد.
+        یکی از اصول مهم صنعت نوین معرق چرم، توجه یکسان به سطح خارجی و داخلی اثر است. این تصویر نمای باز جعبه را نشان می‌دهد که کیفیت اجرای داخلی و تقدیم‌نامه را به‌وضوح آشکار می‌کند. تقدیم‌نامه با خوشنویسی دقیق و دورگیری طلایی اجرا شده و سطح داخلی با همان دقت سطح خارجی، قوام‌آوری و تثبیت شده است. این رویکرد باعث می‌شود اثر نه تنها از بیرون زیبا باشد، بلکه هنگام استفاده نیز حس نفاست و کیفیت را منتقل کند. جعبه در عین حال که یک شیء کاربردی است، ارزش هنری و یادمانی بالایی دارد و نمونه‌ای موفق از تلفیق کارکرد و زیبایی در صنعت نوین معرق چرم به‌شمار می‌رود.
       </p>
     </figcaption>
   </figure>
 
   <!-- تصویر ۴ -->
   <figure class="figure">
-    <img src="assets/images/702429138_86703.jpg" alt="جلد کتاب با قاب اسلیمی و خوشنویسی" loading="lazy">
+    <div class="img-wrap">
+      <span class="figure-number">۴</span>
+      <img src="assets/images/702429138_86703.jpg" alt="جلد کتاب با قاب اسلیمی و خوشنویسی" loading="lazy">
+    </div>
     <figcaption class="figure-caption">
-      <h3>۴. جلد کتاب فاخر با قاب اسلیمی و خوشنویسی</h3>
+      <h3>جلد کتاب فاخر با قاب اسلیمی و خوشنویسی</h3>
+      <div class="tech-tags">
+        <span>قاب اسلیمی</span>
+        <span>خوشنویسی</span>
+        <span>خال طلایی</span>
+        <span>رنگ‌آمیزی تخصصی</span>
+      </div>
       <p>
-        جلد کتاب یکی از کاربردهای سنتی و همچنان زنده معرق چرم است. در این اثر، قاب اسلیمی به‌صورت کامل با تکنیک معرق اجرا شده و فضای مرکزی به خوشنویسی اختصاص یافته است. رنگ‌آمیزی تخصصی و خال‌زنی طلایی، درخشش و عمق خاصی به سطح کار بخشیده است. اجرای دقیق گوشه‌ها و اتصال بی‌نقص قطعات چرم، مهارت فنی بالای پدیدآورنده را نشان می‌دهد. این جلد نمونه‌ای روشن از پیوند هنر سنتی ایرانی با استانداردهای اجرایی صنعت نوین معرق چرم است.
+        جلد کتاب از کاربردهای سنتی و همچنان زنده معرق چرم است که در صنعت نوین با استانداردهای بالاتری اجرا می‌شود. در این اثر، قاب اسلیمی به‌صورت کامل با تکنیک معرق و برش دقیق قطعات چرم پیاده شده و فضای مرکزی به خوشنویسی اختصاص یافته است. رنگ‌آمیزی تخصصی با فرمول رنگ مخصوص آثار معرق چرم و خال‌زنی طلایی، درخشش و عمق خاصی به سطح کار بخشیده است. اتصال بی‌نقص قطعات در گوشه‌ها و یکنواختی بافت، مهارت فنی پدیدآورنده را نشان می‌دهد. این جلد نمونه‌ای روشن از پیوند هنر سنتی ایرانی با نظام اجرایی مدرن صنعت نوین معرق چرم است و قابلیت تولید آثار نفیس و ماندگار را به نمایش می‌گذارد.
       </p>
     </figcaption>
   </figure>
 
   <div class="article-end">
     <p>برای مشاهده مجموعه کامل آثار به <a href="gallery.html">گالری</a> مراجعه کنید.</p>
-    <p style="margin-top:.6rem;font-size:.9rem;opacity:.85">پدیدآورنده شیوه: استاد افشین خلیلی — گروه خلاقیت‌های تجسمی ایده، اصفهان</p>
+    <p class="credit">پدیدآورنده شیوه: استاد افشین خلیلی — گروه خلاقیت‌های تجسمی ایده، اصفهان</p>
   </div>
 </div>
 

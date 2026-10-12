@@ -129,7 +129,8 @@ body { background: var(--cream); font-family: 'Vazirmatn', Tahoma, sans-serif; c
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #1c120d;
   transition: transform .7s cubic-bezier(.22,1,.36,1);
   display: block;
 }
@@ -256,6 +257,13 @@ body { background: var(--cream); font-family: 'Vazirmatn', Tahoma, sans-serif; c
   font-weight: 400;
 }
 
+@media (hover: none) {
+  .gallery-overlay { opacity: 1; background: linear-gradient(to top, rgba(20,10,5,.9) 0%, rgba(20,10,5,.24) 45%, transparent 72%); }
+  .gallery-overlay h3 { transform: none; }
+  .gallery-overlay p { opacity: 1; transform: none; }
+  .zoom-hint { opacity: 1; transform: none; }
+}
+
 /* Footer inherits */
 
 @media (max-width: 700px) {
@@ -284,160 +292,160 @@ body { background: var(--cream); font-family: 'Vazirmatn', Tahoma, sans-serif; c
 
 <section class="page-hero">
   <h1>گالری آثار صنعت نوین معرق چرم</h1>
-  <p>مجموعه‌ای از جعبه‌ها، جلدها و آثار فاخر اجراشده با تکنیک‌های معرق، بافت تریشه، قوام‌آوری و رزین زیرکار</p>
+  <p>نمونه‌هایی از جلدها، جعبه‌ها و فرم‌های تزئینی؛ توضیحات بر پایه جزئیات قابل مشاهده تنظیم شده‌اند و تکنیک‌های اجرایی فقط در موارد مستند نام برده می‌شوند</p>
   <div class="hero-line"></div>
 </section>
 
 <div class="gallery-cat">
   <h2>آثار منتخب</h2>
-  <p>نمونه‌های واقعی اجراشده توسط پدیدآورنده شیوه — استاد افشین خلیلی</p>
+  <p>نمونه‌های تصویری؛ انتساب و جزئیات فنی هر اثر باید با سوابق کارگاهی تطبیق داده شود</p>
 </div>
 
 <section class="gallery-section">
   <div class="gallery-grid">
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/803702709_16083.jpg" alt="مجموعه جعبه و جلد" loading="lazy">
+      <img src="assets/images/803702709_16083.jpg" alt="جزئیات قاب چرمی با خوشنویسی و بافت تریشه" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>مجموعه جعبه و جلد</h3><p>ترکیب‌بندی کلاسیک ایرانی</p></div>
+      <div class="gallery-overlay"><h3>جزئیات قاب چرمی با خوشنویسی و بافت تریشه</h3><p>نمای نزدیک از ترکیب خوشنویسی، حاشیه‌های برجسته و ردیف‌های بافتی تزئینی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/107930821_23262.jpg" alt="جعبه گنبدی مشبک" loading="lazy">
+      <img src="assets/images/107930821_23262.jpg" alt="مجموعه جلد و جعبه تزئین‌شده با چرم" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه گنبدی مشبک</h3><p>تکنیک مشبک + بافت پیچیده</p></div>
+      <div class="gallery-overlay"><h3>مجموعه جلد و جعبه تزئین‌شده با چرم</h3><p>دو اثر با سطوح چرمی تزئینی، نقش‌های پیچشی و قاب‌بندی خوشنویسی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/429938074_156143.jpg" alt="جعبه با تقدیم‌نامه" loading="lazy">
+      <img src="assets/images/429938074_156143.jpg" alt="تابلوی برجسته با صحنه پیکره‌ای" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه با تقدیم‌نامه</h3><p>اجرا روی زیرکار چوبی</p></div>
+      <div class="gallery-overlay"><h3>تابلوی برجسته با صحنه پیکره‌ای</h3><p>اثر قاب‌شده با صحنه پیکره‌ای و قاب تزئینی؛ جنس زیرکار از تصویر به‌تنهایی قطعی نیست</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/431709818_129873.jpg" alt="جزئیات خوشنویسی" loading="lazy">
+      <img src="assets/images/431709818_129873.jpg" alt="جعبه گنبدی چرمی؛ نماهای مختلف" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جزئیات خوشنویسی</h3><p>خط ثلث + دورگیری طلایی</p></div>
+      <div class="gallery-overlay"><h3>جعبه گنبدی چرمی؛ نماهای مختلف</h3><p>چند نمای بیرونی و داخلی از جعبه گنبدی با نقش‌های چرمی، حاشیه‌های برجسته و تزئینات نقطه‌ای</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/431827353_130284.jpg" alt="جعبه باز — نمای کامل" loading="lazy">
+      <img src="assets/images/431827353_130284.jpg" alt="پیکره اسب با جزئیات تزئینی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه باز — نمای کامل</h3><p>جزئیات داخلی و خارجی</p></div>
+      <div class="gallery-overlay"><h3>پیکره اسب با جزئیات تزئینی</h3><p>نمای مجموعه‌ای از پیکره اسب و جزئیات سطح؛ انتساب کامل اثر به صنعت معرق چرم نیازمند تأیید مستند است</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446530319_473513.jpg" alt="جلد دیوان حافظ" loading="lazy">
+      <img src="assets/images/446530319_473513.jpg" alt="اثر حجمی با فرم کشیده و پوشش تزئینی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جلد دیوان حافظ</h3><p>رنگ‌آمیزی تخصصی + خال طلایی</p></div>
+      <div class="gallery-overlay"><h3>اثر حجمی با فرم کشیده و پوشش تزئینی</h3><p>نمای یک فرم حجمی کشیده با سطح براق و خطوط تزئینی؛ جنس و شیوه ساخت از تصویر به‌تنهایی تأیید نمی‌شود</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446706052_310224.jpg" alt="جعبه قوسی سه‌بعدی" loading="lazy">
+      <img src="assets/images/446706052_310224.jpg" alt="اثر حجمی دست‌نما با صحنه پیکره‌ای" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه قوسی سه‌بعدی</h3><p>شیوه مطبق + بافت تریشه</p></div>
+      <div class="gallery-overlay"><h3>اثر حجمی دست‌نما با صحنه پیکره‌ای</h3><p>ترکیب صحنه پیکره‌ای و بافت برجسته پیرامونی؛ نوع مواد و مراحل اجرا نیازمند مستند کارگاهی است</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446712527_410660.jpg" alt="جزئیات سطح معرق" loading="lazy">
+      <img src="assets/images/446712527_410660.jpg" alt="مجموعه ظروف و اشیای تزئینی با پوشش نقش‌دار" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جزئیات سطح معرق</h3><p>بافت و قوام‌آوری</p></div>
+      <div class="gallery-overlay"><h3>مجموعه ظروف و اشیای تزئینی با پوشش نقش‌دار</h3><p>چند فرم حجمی با نقش‌های تزئینی و جزئیات سطحی؛ برای نسبت‌دادن همه اجزا به معرق چرم باید جداگانه بررسی شوند</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446735698_439444.jpg" alt="جلد کتاب فاخر" loading="lazy">
+      <img src="assets/images/446735698_439444.jpg" alt="نمای نزدیک از سطح یک ظرف تزئینی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جلد کتاب فاخر</h3><p>قاب اسلیمی + رنگ‌آمیزی</p></div>
+      <div class="gallery-overlay"><h3>نمای نزدیک از سطح یک ظرف تزئینی</h3><p>جزئیات نقش پیچشی و خطوط برجسته روی سطح؛ تصویر برای تشخیص دقیق لایه‌های زیرکار کافی نیست</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446738183_478107.jpg" alt="نمای کناری جلد" loading="lazy">
+      <img src="assets/images/446738183_478107.jpg" alt="جعبه چرمی با درِ قوس‌دار" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>نمای کناری جلد</h3><p>جزئیات عطف و ساختار</p></div>
+      <div class="gallery-overlay"><h3>جعبه چرمی با درِ قوس‌دار</h3><p>نمای جعبه با درِ قوس‌دار، ردیف‌های حلقه‌ای و حاشیه‌های تزئینی برجسته</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/446738833_407557.jpg" alt="جلد دیوان حافظ" loading="lazy">
+      <img src="assets/images/446738833_407557.jpg" alt="مجموعه جلد و جعبه با تزئینات چرمی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جلد دیوان حافظ</h3><p>نمای سه‌ربعی</p></div>
+      <div class="gallery-overlay"><h3>مجموعه جلد و جعبه با تزئینات چرمی</h3><p>دو اثر کنار هم با قاب‌بندی مرکزی، خوشنویسی و بافت‌های پیچشی پیرامونی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/449011608_147089.jpg" alt="جعبه با حاشیه اسلیمی" loading="lazy">
+      <img src="assets/images/449011608_147089.jpg" alt="جزئیات خوشنویسی و حاشیه تزئینی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه با حاشیه اسلیمی</h3><p>ترکیب‌بندی کلاسیک</p></div>
+      <div class="gallery-overlay"><h3>جزئیات خوشنویسی و حاشیه تزئینی</h3><p>نمای نزدیک از خوشنویسی در قاب مرکزی و حاشیه‌های برجسته و نقطه‌گذاری‌شده</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/449014299_330604.jpg" alt="جعبه مستطیل کامل" loading="lazy">
+      <img src="assets/images/449014299_330604.jpg" alt="قاب چرمی با خوشنویسی مرکزی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه مستطیل کامل</h3><p>حاشیه پیچیده + ترنج</p></div>
+      <div class="gallery-overlay"><h3>قاب چرمی با خوشنویسی مرکزی</h3><p>ترکیب قاب‌های تو‌در‌تو، خوشنویسی و تزئینات حاشیه‌ای؛ نام دقیق تکنیک از تصویر به‌تنهایی تعیین نمی‌شود</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/455226310_200831.jpg" alt="جعبه پایه‌دار" loading="lazy">
+      <img src="assets/images/455226310_200831.jpg" alt="جلد کتاب با عطف برجسته" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه پایه‌دار</h3><p>ترکیب معرق و ساختار حجمی</p></div>
+      <div class="gallery-overlay"><h3>جلد کتاب با عطف برجسته</h3><p>نمای سه‌بعدی جلد، عطف و قاب تزئینی؛ خطوط و برجستگی‌ها در تصویر قابل مشاهده‌اند</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/702220392_101227.jpg" alt="مجموعه بته‌جقه" loading="lazy">
+      <img src="assets/images/702220392_101227.jpg" alt="جلد کتاب با قاب‌بندی و خوشنویسی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>مجموعه بته‌جقه</h3><p>نقش‌مایه سنتی ایرانی</p></div>
+      <div class="gallery-overlay"><h3>جلد کتاب با قاب‌بندی و خوشنویسی</h3><p>نمای عمودی جلد با قاب‌های تزئینی، خوشنویسی مرکزی و جزئیات رنگی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/702415260_39675.jpg" alt="جعبه با نقش بته‌جقه" loading="lazy">
+      <img src="assets/images/702415260_39675.jpg" alt="جلد چرمی با قاب مرکزی و بافت پیرامونی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه با نقش بته‌جقه</h3><p>تکنیک معرق کامل</p></div>
+      <div class="gallery-overlay"><h3>جلد چرمی با قاب مرکزی و بافت پیرامونی</h3><p>قاب مرکزی چندلایه، خوشنویسی و حاشیه متراکم از عناصر حلقه‌ای و پیچشی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/702429138_86703.jpg" alt="جلد با قاب اسلیمی" loading="lazy">
+      <img src="assets/images/702429138_86703.jpg" alt="ساز زهی با تزئینات سطحی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جلد با قاب اسلیمی</h3><p>خوشنویسی و رنگ‌آمیزی</p></div>
+      <div class="gallery-overlay"><h3>ساز زهی با تزئینات سطحی</h3><p>نماهای مختلف از ساز زهی و سطوح تزئینی آن؛ این تصویر از جلد یا جعبه نیست</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/702429174_88333.jpg" alt="جزئیات قاب و خط" loading="lazy">
+      <img src="assets/images/702429174_88333.jpg" alt="جزئیات قاب و خوشنویسی روی سطح چرمی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جزئیات قاب و خط</h3><p>دورگیری طلایی</p></div>
+      <div class="gallery-overlay"><h3>جزئیات قاب و خوشنویسی روی سطح چرمی</h3><p>نمای نزدیک از خوشنویسی مرکزی، قاب‌بندی چندلایه و نقش‌های حاشیه‌ای</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/7a9ae3456e7446b597ea0f17ad9a9645.jpg" alt="جعبه گنبدی در کارگاه" loading="lazy">
+      <img src="assets/images/7a9ae3456e7446b597ea0f17ad9a9645.jpg" alt="قاب تزئینی با خوشنویسی بزرگ" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه گنبدی در کارگاه</h3><p>مشبک‌کاری پیچیده</p></div>
+      <div class="gallery-overlay"><h3>قاب تزئینی با خوشنویسی بزرگ</h3><p>سطح قاب‌شده با خوشنویسی درشت و حاشیه‌های پیچشی برجسته</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/802132071_37922.jpg" alt="جلد حافظ با رنگ" loading="lazy">
+      <img src="assets/images/802132071_37922.jpg" alt="قاب چرمی روشن با خوشنویسی مرکزی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جلد حافظ با رنگ</h3><p>تذهیب و خوشنویسی</p></div>
+      <div class="gallery-overlay"><h3>قاب چرمی روشن با خوشنویسی مرکزی</h3><p>قاب مرکزی روشن، خوشنویسی و حاشیه بافت‌دار؛ جزئیات رنگ و برجستگی در تصویر دیده می‌شوند</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/802207873_106127.jpg" alt="جعبه تقدیمی" loading="lazy">
+      <img src="assets/images/802207873_106127.jpg" alt="مجموعه ظروف با سطوح تزئینی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جعبه تقدیمی</h3><p>خوشنویسی اختصاصی</p></div>
+      <div class="gallery-overlay"><h3>مجموعه ظروف با سطوح تزئینی</h3><p>چند ظرف با فرم‌ها و نقش‌های متفاوت؛ انتساب هر ظرف و تکنیک آن باید بر اساس مستندات اثر انجام شود</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/802232502_37301.jpg" alt="جزئیات سطح جعبه" loading="lazy">
+      <img src="assets/images/802232502_37301.jpg" alt="جلد یا قاب تزئینی با خوشنویسی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>جزئیات سطح جعبه</h3><p>بافت و قوام نهایی</p></div>
+      <div class="gallery-overlay"><h3>جلد یا قاب تزئینی با خوشنویسی</h3><p>سطح مستطیلی با قاب‌بندی متراکم، خوشنویسی مرکزی و ردیف‌های تزئینی</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/802232593_38114.jpg" alt="نمای نزدیک معرق" loading="lazy">
+      <img src="assets/images/802232593_38114.jpg" alt="جلد حافظ با قاب هندسی و خوشنویسی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>نمای نزدیک معرق</h3><p>کیفیت اجرا و جزئیات</p></div>
+      <div class="gallery-overlay"><h3>جلد حافظ با قاب هندسی و خوشنویسی</h3><p>جلد عمودی با عنوان خوشنویسی مرکزی، قاب هندسی و ردیف‌های نقطه‌ای برجسته</p></div>
     </div>
 
     <div class="gallery-item" onclick="openLightbox(this)">
-      <img src="assets/images/802332536_37709.jpg" alt="مجموعه آثار" loading="lazy">
+      <img src="assets/images/802332536_37709.jpg" alt="مجموعه‌ای از جلدها و جزئیات تزئینی" loading="lazy">
       <span class="zoom-hint">+</span>
-      <div class="gallery-overlay"><h3>مجموعه آثار</h3><p>تنوع تکنیک و فرم</p></div>
+      <div class="gallery-overlay"><h3>مجموعه‌ای از جلدها و جزئیات تزئینی</h3><p>چهار نمای متفاوت از جلدها و قاب‌های خوشنویسی؛ تصاویر مجموعه‌ای‌اند و نباید به‌عنوان یک اثر واحد معرفی شوند</p></div>
     </div>
 
   </div>
@@ -462,9 +470,10 @@ body { background: var(--cream); font-family: 'Vazirmatn', Tahoma, sans-serif; c
 function openLightbox(el) {
   const img = el.querySelector('img');
   const title = el.querySelector('.gallery-overlay h3')?.textContent || '';
+  const description = el.querySelector('.gallery-overlay p')?.textContent || '';
   if (img && img.src) {
     document.getElementById('lightboxImg').src = img.src;
-    document.getElementById('lightboxCaption').textContent = title;
+    document.getElementById('lightboxCaption').textContent = description ? `${title} — ${description}` : title;
     document.getElementById('lightbox').classList.add('active');
     document.body.style.overflow = 'hidden';
   }

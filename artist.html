@@ -1,71 +1,188 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>استاد افشین خلیلی | صنعت نوین معرق چرم</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استاد افشین خلیلی | صنعت نوین معرق چرم</title>
+<meta name="description" content="معرفی استاد افشین خلیلی؛ پدیدآورنده شیوه‌های اجرایی صنعت نوین معرق چرم، هنرمند اصفهانی و مؤلف.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/artist.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+.artist-hero-extra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.2rem;
+}
+.artist-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(201, 162, 39, 0.12);
+  color: var(--leather-dark);
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 1px solid var(--border-gold);
+}
+.artist-badge::before {
+  content: "◆";
+  color: var(--gold);
+  font-size: 0.65rem;
+}
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;
+  margin-top: 1.4rem;
+}
+.role-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+}
+.role-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-gold);
+}
+.role-card h3 {
+  color: var(--leather);
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.6rem;
+}
+.role-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+.activity-list {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.95rem 1.15rem;
+  transition: var(--transition);
+}
+.activity-item:hover {
+  border-color: var(--border-gold);
+  background: var(--surface);
+}
+.activity-item span {
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+.activity-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+</style>
 </head>
 <body>
 <header class="site-header">
 <div class="container">
-<a href="index.html" class="logo"><strong>صنعت نوین معرق چرم</strong></a>
+<a href="index.html" class="logo"><strong>مرجع رسمی صنعت نوین معرق چرم</strong></a>
 <nav class="main-nav">
 <a href="index.html">خانه</a>
 <a href="about.html">معرفی صنعت</a>
-<a href="history.html">خاستگاه</a>
+<a href="history.html">خاستگاه و هویت</a>
 <a href="techniques.html">تکنیک‌ها</a>
 <a href="education.html">آموزش</a>
 <a href="artist.html" class="active">افشین خلیلی</a>
+<a href="gallery.html">گالری آثار</a>
+<a href="portfolio.html">نمونه‌کارها</a>
 <a href="contact.html">ارتباط</a>
 </nav>
 </div>
 </header>
+
 <section class="page-hero">
 <div class="container">
 <h1>استاد افشین خلیلی</h1>
 <p>هنرمند اصفهانی، هنرمند چندوجهی و مؤلف شیوه‌های اجرایی صنعت نوین معرق چرم</p>
+<div class="artist-hero-extra">
+  <span class="artist-badge">پدیدآورنده شیوه</span>
+  <span class="artist-badge">مؤلف و مدرس</span>
+  <span class="artist-badge">اصفهان</span>
+</div>
 </div>
 </section>
+
 <main class="section">
 <div class="container">
-<div class="content-block">
+
+<div class="content-block reveal">
 <h2>معرفی هنری و حرفه‌ای</h2>
 <p>استاد افشین خلیلی، هنرمند اصفهانی و هنرمند چندوجهی، در حوزه هنرهای تجسمی، موسیقی، خوشنویسی، طراحی، صنایع دستی، آموزش، مدلسازی سه‌بعدی صنعتی و نویسندگی فعالیت دارد.</p>
 <p>رویکرد اصلی ایشان پیوند میان هنرهای سنتی، طراحی معاصر و فناوری‌های نوین با هدف توسعه روش‌های اجرایی و ساختارهای جدید در حوزه صنایع دستی است.</p>
 </div>
-<div class="content-block">
+
+<div class="content-block reveal">
 <h2>نقش در صنعت نوین معرق چرم</h2>
 <p>استاد افشین خلیلی به‌عنوان <strong>پدیدآورنده شیوه‌های اجرایی صنعت نوین معرق چرم</strong> شناخته می‌شود؛ جایگاهی که به توسعه، تدوین و نظام‌مند کردن روش‌های اجرایی این حوزه ارتباط دارد.</p>
 <p>این نقش از مفهوم مؤلف بودن جدا نیست؛ مؤلف کتاب و مستندات آموزشی، مسئول تدوین دانش و ساختار آموزشی است و پدیدآورنده شیوه، به شکل‌گیری و توسعه روش‌های اجرایی مرتبط است.</p>
+
+<div class="role-grid">
+  <div class="role-card">
+    <h3>پدیدآورنده شیوه</h3>
+    <p>شکل‌گیری، توسعه و نظام‌مند کردن روش‌های اجرایی صنعت نوین معرق چرم.</p>
+  </div>
+  <div class="role-card">
+    <h3>مؤلف و مدرس</h3>
+    <p>تدوین مبانی آموزشی، مستندسازی مراحل اجرایی و انتقال دانش تخصصی.</p>
+  </div>
 </div>
-<div class="content-block">
+</div>
+
+<div class="content-block reveal">
 <h2>تألیف و آموزش</h2>
 <p>ایشان مؤلف و مدرس حوزه هنر و صنایع دستی بوده و در تدوین مبانی آموزشی، مستندسازی مراحل اجرایی و انتقال دانش تخصصی صنعت نوین معرق چرم فعالیت دارد.</p>
 <p>کتاب و محتوای آموزشی این حوزه با هدف ایجاد یک مرجع علمی و عملی برای آموزش مهارت‌های مرتبط با معرق‌کاری چرم تدوین می‌شود.</p>
 </div>
-<div class="content-block">
+
+<div class="content-block reveal">
 <h2>حوزه‌های فعالیت</h2>
-<ul>
-<li>هنرهای تجسمی و طراحی نقوش ایرانی</li>
-<li>صنایع دستی چرمی و صنعت نوین معرق چرم</li>
-<li>آموزش و تدوین محتوای تخصصی</li>
-<li>مدلسازی سه‌بعدی صنعتی، CNC و فناوری‌های ساخت</li>
-<li>ایرانی‌سازی تکنیک‌های تجسمی مدرن</li>
-</ul>
+<div class="activity-list">
+  <div class="activity-item"><span>◆</span><p>هنرهای تجسمی و طراحی نقوش ایرانی</p></div>
+  <div class="activity-item"><span>◆</span><p>صنایع دستی چرمی و صنعت نوین معرق چرم</p></div>
+  <div class="activity-item"><span>◆</span><p>آموزش و تدوین محتوای تخصصی</p></div>
+  <div class="activity-item"><span>◆</span><p>مدلسازی سه‌بعدی صنعتی، CNC و فناوری‌های ساخت</p></div>
+  <div class="activity-item"><span>◆</span><p>ایرانی‌سازی تکنیک‌های تجسمی مدرن</p></div>
 </div>
-<div class="content-block">
+</div>
+
+<div class="content-block reveal">
 <h2>گروه خلاقیت‌های تجسمی ایده</h2>
-<p>گروه خلاقیت‌های تجسمی ایده در اصفهان، بستر فعالیت‌های هنری، پژوهشی و آموزشی مرتبط با این مسیر است.</p>
+<p>گروه خلاقیت‌های تجسمی ایده در اصفهان، بستر فعالیت‌های هنری، پژوهشی و آموزشی مرتبط با این مسیر است. این گروه مرجع رسمی صنعت نوین معرق چرم محسوب می‌شود.</p>
 </div>
+
 </div>
 </main>
+
 <footer class="site-footer">
 <div class="container">
-<p>گروه خلاقیت‌های تجسمی ایده — اصفهان</p>
-<p>مؤلف شیوه‌های اجرایی صنعت نوین معرق چرم · استاد افشین خلیلی</p>
+<p>گروه خلاقیت‌های تجسمی ایده — عرصه سیمرغ — اصفهان</p>
+<p>پدیدآورنده شیوه: استاد افشین خلیلی</p>
 </div>
 </footer>
 <script src="js/main.js"></script>

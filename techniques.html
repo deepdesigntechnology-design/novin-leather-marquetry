@@ -1,92 +1,214 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>تکنیک‌های اجرایی | صنعت نوین معرق چرم</title>
-  <meta name="description" content="تکنیک‌های سه‌گانه اجرایی صنعت نوین معرق چرم: اجرای موتیف، بافت/پیچ تریشه، شیوه مطبق، قوام‌آوری، رزین زیرکار (چسب چوب و آب ۱ به ۶) و فارسی‌بر.">
-  <meta name="robots" content="index, follow">
-  <meta name="author" content="استاد افشین خلیلی">
-  <link rel="canonical" href="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/techniques.html">
-  <meta property="og:locale" content="fa_IR">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="تکنیک‌های اجرایی | صنعت نوین معرق چرم">
-  <meta property="og:description" content="تکنیک‌های اجرایی، قوام‌آوری و رزین زیرکار در صنعت نوین معرق چرم.">
-  <meta property="og:url" content="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/techniques.html">
-  <meta property="og:site_name" content="صنعت نوین معرق چرم">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="تکنیک‌های اجرایی | صنعت نوین معرق چرم">
-  <meta name="twitter:description" content="تکنیک‌های اجرایی و رزین زیرکار در صنعت نوین معرق چرم.">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تکنیک‌های اجرایی | صنعت نوین معرق چرم</title>
+<meta name="description" content="تکنیک‌های سه‌گانه اجرایی صنعت نوین معرق چرم: اجرای موتیف، بافت/پیچ تریشه، شیوه مطبق، قوام‌آوری، رزین زیرکار و فارسی‌بر.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="استاد افشین خلیلی">
+<link rel="canonical" href="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/techniques.html">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="تکنیک‌های اجرایی | صنعت نوین معرق چرم">
+<meta property="og:description" content="تکنیک‌های اجرایی، قوام‌آوری و رزین زیرکار در صنعت نوین معرق چرم.">
+<meta property="og:url" content="https://deepdesigntechnology-design.github.io/novin-leather-marquetry/techniques.html">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.6rem;
+  margin-top: 1.5rem;
+}
+.tech-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2rem 1.8rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.tech-card::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: 5px; height: 100%;
+  background: linear-gradient(180deg, var(--gold), transparent);
+  opacity: 0;
+  transition: var(--transition);
+}
+.tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-gold);
+}
+.tech-card:hover::before { opacity: 1; }
+.tech-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--leather-dark);
+  font-weight: 900;
+  font-size: 1.15rem;
+  margin-bottom: 1.1rem;
+  box-shadow: var(--shadow-gold);
+}
+.tech-card h3 {
+  color: var(--leather);
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+.tech-card p {
+  color: var(--muted);
+  font-size: 0.97rem;
+  line-height: 1.85;
+}
+.tech-note {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  background: rgba(201, 162, 39, 0.08);
+  border-right: 3px solid var(--gold);
+  border-radius: 0 10px 10px 0;
+  font-size: 0.9rem;
+  color: var(--leather-mid);
+}
+.sub-tech {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+.sub-tech-item {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1.3rem 1.4rem;
+  transition: var(--transition);
+}
+.sub-tech-item:hover {
+  border-color: var(--border-gold);
+  background: var(--surface);
+}
+.sub-tech-item h4 {
+  color: var(--leather);
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.sub-tech-item p {
+  color: var(--muted);
+  font-size: 0.94rem;
+  margin: 0;
+}
+.formula {
+  display: inline-block;
+  background: var(--leather-dark);
+  color: var(--gold-light);
+  padding: 0.25rem 0.7rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  margin: 0 0.2rem;
+}
+</style>
 </head>
 <body>
 <header class="site-header">
 <div class="container">
-<a href="index.html" class="logo"><strong>صنعت نوین معرق چرم</strong></a>
+<a href="index.html" class="logo"><strong>مرجع رسمی صنعت نوین معرق چرم</strong></a>
 <nav class="main-nav">
 <a href="index.html">خانه</a>
-<a href="about.html">درباره</a>
-<a href="history.html">خاستگاه</a>
+<a href="about.html">معرفی صنعت</a>
+<a href="history.html">خاستگاه و هویت</a>
 <a href="techniques.html" class="active">تکنیک‌ها</a>
 <a href="education.html">آموزش</a>
-<a href="artist.html">هنرمند</a>
-<a href="contact.html">تماس</a>
+<a href="artist.html">افشین خلیلی</a>
+<a href="gallery.html">گالری آثار</a>
+<a href="portfolio.html">نمونه‌کارها</a>
+<a href="contact.html">ارتباط</a>
 </nav>
 </div>
 </header>
+
 <section class="page-hero">
 <div class="container">
-<h1>تکنیک‌های سه‌گانه اجرایی صنعت نوین معرق چرم</h1>
-<p>ساختار فنی و شیوه‌های اختصاصی اجرای اثر</p>
+<h1>تکنیک‌های سه‌گانه اجرایی</h1>
+<p>ساختار فنی و شیوه‌های اختصاصی اجرای اثر در صنعت نوین معرق چرم</p>
 </div>
 </section>
+
 <main class="section">
 <div class="container">
-<div class="content-block">
+
+<div class="content-block reveal">
 <h2>معرفی تکنیک‌های سه‌گانه</h2>
 <p>ساختار اجرایی صنعت نوین معرق چرم بر پایه سه تکنیک اصلی شکل گرفته است. این تکنیک‌ها مستقل از یکدیگر بوده و در ترکیب با مراحل طراحی، آماده‌سازی، اتصال و پرداخت، ساختار نهایی اثر را ایجاد می‌کنند.</p>
 </div>
-<div class="content-block">
-<h2>۱. اجرای موتیف</h2>
-<p>اجرای موتیف یکی از تکنیک‌های بنیادی این صنعت است. در این مرحله قطعات طراحی‌شده و برش‌خورده چرم طبیعی، مطابق الگوی تعیین‌شده در جایگاه خود قرار گرفته و با دقت ترکیب می‌شوند.</p>
-<p>اجرای موتیف یک فرآیند مستقل است و نباید با پیچ یا بافت تریشه یکسان تلقی شود؛ زیرا هدف آن ایجاد فرم، نقش و ساختار تصویری با استفاده از قطعات چرمی است.</p>
+
+<div class="tech-grid">
+  <article class="tech-card reveal">
+    <div class="tech-num">۱</div>
+    <h3>اجرای موتیف</h3>
+    <p>قطعات طراحی‌شده و برش‌خورده چرم طبیعی مطابق الگوی تعیین‌شده در جایگاه خود قرار گرفته و با دقت ترکیب می‌شوند. هدف، ایجاد فرم، نقش و ساختار تصویری با قطعات چرمی است.</p>
+    <div class="tech-note">اجرای موتیف یک فرآیند مستقل است و نباید با بافت/پیچ تریشه یکسان تلقی شود.</div>
+  </article>
+
+  <article class="tech-card reveal">
+    <div class="tech-num">۲</div>
+    <h3>بافت / پیچ تریشه</h3>
+    <p>نوارهای باریک حدود یک میلی‌متر از چرم طبیعی (تریشه) با روش‌های مشخص در ساختار اثر به کار می‌روند. با استفاده از پنس و موچین و کنترل دقیق اجرا می‌شود.</p>
+    <div class="tech-note">اصطلاح صحیح: «بافت تریشه» یا «پیچ تریشه» — تکنیک مستقل در کنار اجرای موتیف.</div>
+  </article>
+
+  <article class="tech-card reveal">
+    <div class="tech-num">۳</div>
+    <h3>شیوه مطبق</h3>
+    <p>بر پایه ایجاد لایه‌های ترکیبی و قرارگیری حساب‌شده قطعات چرمی شکل می‌گیرد و امکان ایجاد عمق، برجستگی و تنوع سطحی را فراهم می‌کند.</p>
+    <div class="tech-note">هماهنگی ضخامت چرم، ترتیب لایه‌ها و کنترل اتصال اهمیت ویژه‌ای دارد.</div>
+  </article>
 </div>
-<div class="content-block">
-<h2>۲. پیچ یا بافت تریشه</h2>
-<p>در این تکنیک، نوارهای باریک حدود یک میلی‌متر از چرم طبیعی (تریشه) با روش‌های مشخص در ساختار اثر به کار می‌روند.</p>
-<p>پیچ یا بافت تریشه شامل ایجاد بافت‌های تزئینی و ترکیبی است و با استفاده از ابزارهایی مانند پنس و موچین با کنترل دقیق اجرا می‌شود.</p>
-<p>اصطلاح صحیح این فرآیند «بافت تریشه» یا «پیچ تریشه» است و به‌عنوان یک تکنیک مستقل در کنار اجرای موتیف قرار می‌گیرد.</p>
-</div>
-<div class="content-block">
-<h2>۳. شیوه مطبق</h2>
-<p>شیوه مطبق بر پایه ایجاد لایه‌های ترکیبی و قرارگیری حساب‌شده قطعات چرمی شکل می‌گیرد. این روش امکان ایجاد عمق، برجستگی و تنوع سطحی در اثر را فراهم می‌کند.</p>
-<p>در این شیوه، هماهنگی ضخامت چرم، ترتیب لایه‌ها و کنترل اتصال اهمیت ویژه‌ای دارد.</p>
-</div>
-<div class="content-block">
+
+<div class="content-block reveal" style="margin-top:2.5rem">
 <h2>تکنیک‌های تکمیلی</h2>
-<h3>فارسی‌بُر</h3>
-<p>برش دقیق قطعات با زاویه چهل‌وپنج درجه برای ایجاد اتصال‌های تمیز و هماهنگ در ترکیب قطعات چرمی. فارسی‌بُر می‌تواند به شکل باز یا بسته اجرا شود.</p>
-
-<h3>قوام‌آوری و مشته‌زنی</h3>
-<p>پس از اتصال قطعات، فرآیند مشته‌زنی دو مرحله‌ای و قوام‌آوری برای ایجاد انسجام، فشردگی و دوام ساختار انجام می‌شود.</p>
-
-<h3>رزین زیرکار</h3>
-<p>رزین زیرکار مایعی مرکب و فرمولی ابداعی خاص صنعت نوین معرق چرم است که از ترکیب <strong>چسب چوب و آب به نسبت دقیق ۱ به ۶</strong> (یک واحد چسب چوب به شش واحد آب) تهیه می‌شود.</p>
-<p><strong>زمان اعمال:</strong> پس از تکمیل کامل معرق و انجام مشته‌زنی اولیه، و پیش از قوام‌آوری نهایی.</p>
-<p><strong>دلیل و هدف اعمال:</strong> پوشش‌دهی کامل سطح معرق جهت نفوذ در الیاف چرم، تثبیت ساختار، آماده‌سازی سطح برای مشته‌زنی نهایی و افزایش دوام و انسجام اثر.</p>
-<p>پس از اعمال یکنواخت رزین، کار در حالت دونَم (نیمه‌خشک) قرار گرفته و مشته‌زنی مرحله دوم با ضربات بسیار آرام انجام می‌شود. سپس اجازه داده می‌شود تا رطوبت رزین به‌طور کامل خشک شود.</p>
+<div class="sub-tech">
+  <div class="sub-tech-item">
+    <h4>فارسی‌بُر</h4>
+    <p>برش دقیق قطعات با زاویه چهل‌وپنج درجه برای ایجاد اتصال‌های تمیز و هماهنگ. می‌تواند به شکل باز یا بسته اجرا شود.</p>
+  </div>
+  <div class="sub-tech-item">
+    <h4>قوام‌آوری و مشته‌زنی</h4>
+    <p>پس از اتصال قطعات، مشته‌زنی دو مرحله‌ای و قوام‌آوری برای ایجاد انسجام، فشردگی و دوام ساختار انجام می‌شود.</p>
+  </div>
+  <div class="sub-tech-item">
+    <h4>رزین زیرکار</h4>
+    <p>مایع مرکب و فرمولی ابداعی خاص این صنعت که از ترکیب <span class="formula">چسب چوب + آب به نسبت ۱ به ۶</span> تهیه می‌شود.</p>
+    <p style="margin-top:0.7rem"><strong>زمان اعمال:</strong> پس از تکمیل معرق و مشته‌زنی اولیه، پیش از قوام‌آوری نهایی.</p>
+    <p><strong>هدف:</strong> پوشش‌دهی کامل سطح، نفوذ در الیاف چرم، تثبیت ساختار و آماده‌سازی برای مشته‌زنی نهایی.</p>
+    <p style="margin-top:0.5rem">پس از اعمال، کار در حالت دونَم قرار گرفته و مشته‌زنی مرحله دوم با ضربات بسیار آرام انجام می‌شود تا رطوبت کاملاً خشک شود.</p>
+  </div>
 </div>
-<div class="content-block">
+</div>
+
+<div class="content-block reveal">
 <h2>نظام اجرایی</h2>
 <p>ترکیب این تکنیک‌ها با طراحی نقوش، انتخاب چرم مناسب، برش، اتصال، پرداخت، رنگ‌آمیزی تخصصی و پوشش نهایی، مجموعه‌ای کامل برای اجرای آثار صنعت نوین معرق چرم ایجاد می‌کند.</p>
 </div>
+
 </div>
 </main>
+
 <footer class="site-footer">
 <div class="container">
-<p>گروه خلاقیت‌های تجسمی ایده — اصفهان</p>
+<p>گروه خلاقیت‌های تجسمی ایده — عرصه سیمرغ — اصفهان</p>
 <p>پدیدآورنده شیوه: استاد افشین خلیلی</p>
 </div>
 </footer>

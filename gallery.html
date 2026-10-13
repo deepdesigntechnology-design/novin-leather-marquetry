@@ -1,1 +1,261 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>گالری آثار | صنعت نوین معرق چرم</title>
+<meta name="description" content="گالری آثار فاخر صنعت نوین معرق چرم — جعبه‌ها، جلدها و آثار استاد افشین خلیلی">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+.gallery-page-hero{background:linear-gradient(165deg,#1a0f0a 0%,#2c1810 45%,#3d2518 100%);color:#fff;text-align:center;padding:5.5rem 1.5rem 3.5rem;position:relative;overflow:hidden}
+.gallery-page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(201,162,39,.12) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(201,162,39,.08) 0%,transparent 45%)}
+.gallery-page-hero h1{font-size:clamp(1.9rem,4.5vw,2.8rem);font-weight:900;margin-bottom:.7rem;position:relative;letter-spacing:-0.02em}
+.gallery-page-hero p{color:#e8d5a3;max-width:580px;margin:0 auto;font-size:1.05rem;font-weight:300;line-height:1.8;position:relative}
+.hero-line{width:56px;height:3px;background:linear-gradient(90deg,#c9a227,transparent);margin:1.4rem auto 0;border-radius:2px;position:relative}
+.gallery-cat{max-width:1280px;margin:0 auto;padding:2.5rem 1.5rem 0.6rem}
+.gallery-cat h2{color:#1c100a;font-size:1.35rem;font-weight:800;display:flex;align-items:center;gap:.7rem}
+.gallery-cat h2::before{content:'';width:4px;height:1.3em;background:#c9a227;border-radius:2px}
+.gallery-cat p{color:#6b5644;font-size:.92rem;margin-top:.4rem;margin-right:1.1rem}
+.gallery-section{padding:1.5rem 1.5rem 5rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.4rem;max-width:1280px;margin:0 auto}
+.gallery-item{position:relative;border-radius:16px;overflow:hidden;background:#2a1a12;box-shadow:0 10px 32px rgba(28,16,10,.14);transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s ease,border-color .45s ease;cursor:pointer;aspect-ratio:4/3.1;border:1px solid rgba(201,162,39,.1)}
+.gallery-item:hover{transform:translateY(-8px);box-shadow:0 22px 55px rgba(28,16,10,.24);border-color:rgba(201,162,39,.3)}
+.gallery-item img{width:100%;height:100%;object-fit:contain;background:#1c120d;transition:transform .7s cubic-bezier(.22,1,.36,1);display:block}
+.gallery-item:hover img{transform:scale(1.07)}
+.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,5,.94) 0%,rgba(20,10,5,.45) 42%,transparent 72%);opacity:0;transition:opacity .4s ease;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 1.3rem;color:#fff}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-overlay h3{font-size:1.05rem;font-weight:700;margin-bottom:.3rem;transform:translateY(14px);transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.gallery-item:hover .gallery-overlay h3{transform:translateY(0)}
+.gallery-overlay p{font-size:.84rem;color:#e8d5a3;opacity:0;transform:translateY(10px);transition:all .4s cubic-bezier(.22,1,.36,1) .05s;font-weight:300}
+.gallery-item:hover .gallery-overlay p{opacity:1;transform:translateY(0)}
+.zoom-hint{position:absolute;top:1rem;left:1rem;width:36px;height:36px;background:rgba(201,162,39,.92);color:#1c100a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.15rem;opacity:0;transform:scale(.7);transition:all .35s ease;font-weight:700}
+.gallery-item:hover .zoom-hint{opacity:1;transform:scale(1)}
+.lightbox{position:fixed;inset:0;background:rgba(12,6,3,.96);z-index:9999;display:none;align-items:center;justify-content:center;padding:2rem;backdrop-filter:blur(10px)}
+.lightbox.active{display:flex}
+.lightbox-inner{position:relative;max-width:94vw;max-height:90vh}
+.lightbox img{max-width:90vw;max-height:84vh;border-radius:12px;box-shadow:0 25px 80px rgba(0,0,0,.55);object-fit:contain;display:block}
+.lightbox-close{position:absolute;top:-18px;left:-18px;background:#c9a227;color:#1c100a;border:none;width:44px;height:44px;border-radius:50%;font-size:1.45rem;cursor:pointer;font-weight:700;line-height:1;box-shadow:0 4px 16px rgba(0,0,0,.3);transition:transform .2s,background .2s}
+.lightbox-close:hover{transform:scale(1.08);background:#e0b83a}
+.lightbox-caption{text-align:center;color:#e8d5a3;margin-top:.9rem;font-size:.95rem}
+@media (hover:none){.gallery-overlay{opacity:1;background:linear-gradient(to top,rgba(20,10,5,.9) 0%,rgba(20,10,5,.28) 48%,transparent 75%)}.gallery-overlay h3{transform:none}.gallery-overlay p{opacity:1;transform:none}.zoom-hint{opacity:1;transform:none}}
+@media (max-width:700px){.gallery-grid{grid-template-columns:1fr;gap:1.15rem}.gallery-page-hero{padding:4.5rem 1.2rem 3rem}.lightbox-close{top:12px;left:12px}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<div class="container">
+<a href="index.html" class="logo"><strong>مرجع رسمی صنعت نوین معرق چرم</strong></a>
+<nav class="main-nav">
+<a href="index.html">خانه</a>
+<a href="about.html">معرفی صنعت</a>
+<a href="history.html">خاستگاه و هویت</a>
+<a href="techniques.html">تکنیک‌ها</a>
+<a href="education.html">آموزش</a>
+<a href="artist.html">افشین خلیلی</a>
+<a href="gallery.html" class="active">گالری آثار</a>
+<a href="portfolio.html">نمونه‌کارها</a>
+<a href="contact.html">ارتباط</a>
+</nav>
+</div>
+</header>
+
+<section class="gallery-page-hero">
+  <h1>گالری آثار صنعت نوین معرق چرم</h1>
+  <p>نمونه‌هایی از جلدها، جعبه‌ها و فرم‌های تزئینی؛ توضیحات بر پایه جزئیات قابل مشاهده تنظیم شده‌اند</p>
+  <div class="hero-line"></div>
+</section>
+
+<div class="gallery-cat">
+  <h2>آثار منتخب</h2>
+  <p>نمونه‌های تصویری از آثار کارگاهی؛ جزئیات فنی هر اثر با سوابق کارگاهی تطبیق داده می‌شود</p>
+</div>
+
+<section class="gallery-section">
+  <div class="gallery-grid">
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/803702709_16083.jpg" alt="جزئیات قاب چرمی با خوشنویسی و بافت تریشه" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جزئیات قاب چرمی با خوشنویسی و بافت تریشه</h3><p>نمای نزدیک از ترکیب خوشنویسی، حاشیه‌های برجسته و ردیف‌های بافتی تزئینی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/107930821_23262.jpg" alt="مجموعه جلد و جعبه تزئین‌شده با چرم" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>مجموعه جلد و جعبه تزئین‌شده با چرم</h3><p>دو اثر با سطوح چرمی تزئینی، نقش‌های پیچشی و قاب‌بندی خوشنویسی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/429938074_156143.jpg" alt="تابلوی برجسته با صحنه پیکره‌ای" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>تابلوی برجسته با صحنه پیکره‌ای</h3><p>اثر قاب‌شده با صحنه پیکره‌ای و قاب تزئینی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/431709818_129873.jpg" alt="جعبه گنبدی چرمی؛ نماهای مختلف" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جعبه گنبدی چرمی؛ نماهای مختلف</h3><p>چند نمای بیرونی و داخلی از جعبه گنبدی با نقش‌های چرمی و حاشیه‌های برجسته</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/431827353_130284.jpg" alt="پیکره اسب با جزئیات تزئینی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>پیکره اسب با جزئیات تزئینی</h3><p>نمای مجموعه‌ای از پیکره اسب و جزئیات سطح</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446530319_473513.jpg" alt="اثر حجمی با فرم کشیده و پوشش تزئینی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>اثر حجمی با فرم کشیده و پوشش تزئینی</h3><p>نمای یک فرم حجمی کشیده با سطح براق و خطوط تزئینی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446706052_310224.jpg" alt="اثر حجمی دست‌نما با صحنه پیکره‌ای" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>اثر حجمی دست‌نما با صحنه پیکره‌ای</h3><p>ترکیب صحنه پیکره‌ای و بافت برجسته پیرامونی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446712527_410660.jpg" alt="مجموعه ظروف و اشیای تزئینی با پوشش نقش‌دار" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>مجموعه ظروف و اشیای تزئینی با پوشش نقش‌دار</h3><p>چند فرم حجمی با نقش‌های تزئینی و جزئیات سطحی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446735698_439444.jpg" alt="نمای نزدیک از سطح یک ظرف تزئینی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>نمای نزدیک از سطح یک ظرف تزئینی</h3><p>جزئیات نقش پیچشی و خطوط برجسته روی سطح</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446738183_478107.jpg" alt="جعبه چرمی با درِ قوس‌دار" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جعبه چرمی با درِ قوس‌دار</h3><p>نمای جعبه با درِ قوس‌دار، ردیف‌های حلقه‌ای و حاشیه‌های تزئینی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/446738833_407557.jpg" alt="مجموعه جلد و جعبه با تزئینات چرمی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>مجموعه جلد و جعبه با تزئینات چرمی</h3><p>دو اثر کنار هم با قاب‌بندی مرکزی، خوشنویسی و بافت‌های پیچشی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/449011608_147089.jpg" alt="جزئیات خوشنویسی و حاشیه تزئینی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جزئیات خوشنویسی و حاشیه تزئینی</h3><p>نمای نزدیک از خوشنویسی در قاب مرکزی و حاشیه‌های برجسته</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/449014299_330604.jpg" alt="قاب چرمی با خوشنویسی مرکزی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>قاب چرمی با خوشنویسی مرکزی</h3><p>ترکیب قاب‌های تو‌در‌تو، خوشنویسی و تزئینات حاشیه‌ای</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/455226310_200831.jpg" alt="جلد کتاب با عطف برجسته" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جلد کتاب با عطف برجسته</h3><p>نمای سه‌بعدی جلد، عطف و قاب تزئینی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702220392_101227.jpg" alt="جلد کتاب با قاب‌بندی و خوشنویسی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جلد کتاب با قاب‌بندی و خوشنویسی</h3><p>نمای عمودی جلد با قاب‌های تزئینی و خوشنویسی مرکزی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702415260_39675.jpg" alt="جلد چرمی با قاب مرکزی و بافت پیرامونی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جلد چرمی با قاب مرکزی و بافت پیرامونی</h3><p>قاب مرکزی چندلایه، خوشنویسی و حاشیه متراکم</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702429138_86703.jpg" alt="ساز زهی با تزئینات سطحی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>ساز زهی با تزئینات سطحی</h3><p>نماهای مختلف از ساز زهی و سطوح تزئینی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/702429174_88333.jpg" alt="جزئیات قاب و خوشنویسی روی سطح چرمی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جزئیات قاب و خوشنویسی روی سطح چرمی</h3><p>نمای نزدیک از خوشنویسی مرکزی و قاب‌بندی چندلایه</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/7a9ae3456e7446b597ea0f17ad9a9645.jpg" alt="قاب تزئینی با خوشنویسی بزرگ" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>قاب تزئینی با خوشنویسی بزرگ</h3><p>سطح قاب‌شده با خوشنویسی درشت و حاشیه‌های پیچشی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802132071_37922.jpg" alt="قاب چرمی روشن با خوشنویسی مرکزی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>قاب چرمی روشن با خوشنویسی مرکزی</h3><p>قاب مرکزی روشن، خوشنویسی و حاشیه بافت‌دار</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802207873_106127.jpg" alt="مجموعه ظروف با سطوح تزئینی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>مجموعه ظروف با سطوح تزئینی</h3><p>چند ظرف با فرم‌ها و نقش‌های متفاوت</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802232502_37301.jpg" alt="جلد یا قاب تزئینی با خوشنویسی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جلد یا قاب تزئینی با خوشنویسی</h3><p>اثر با قاب‌بندی و خوشنویسی مرکزی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802232593_38114.jpg" alt="جزئیات بافت و نقش روی سطح چرمی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>جزئیات بافت و نقش روی سطح چرمی</h3><p>نمای نزدیک از بافت و نقش‌های تزئینی</p></div>
+    </div>
+
+    <div class="gallery-item" onclick="openLightbox(this)">
+      <img src="assets/images/802332536_37709.jpg" alt="مجموعه آثار چرمی تزئینی" loading="lazy">
+      <span class="zoom-hint">+</span>
+      <div class="gallery-overlay"><h3>مجموعه آثار چرمی تزئینی</h3><p>چند اثر با سطوح و نقش‌های متنوع</p></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightboxImg" src="" alt="اثر معرق چرم">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+<div class="container">
+<p>گروه خلاقیت‌های تجسمی ایده — عرصه سیمرغ — اصفهان</p>
+<p>پدیدآورنده شیوه: استاد افشین خلیلی</p>
+</div>
+</footer>
+
+<script>
+function openLightbox(el) {
+  const img = el.querySelector('img');
+  const title = el.querySelector('.gallery-overlay h3')?.textContent || '';
+  const description = el.querySelector('.gallery-overlay p')?.textContent || '';
+  if (img && img.src) {
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxCaption').textContent = description ? title + ' — ' + description : title;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

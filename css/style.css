@@ -3,7 +3,7 @@
    هویت بصری موزه‌ای · چرم تیره · طلای کهنه · هندسه ایرانی
    ========================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800;900&family=Noto+Naskh+Arabic:wght@500;600;700;800&display=swap');
 
 :root {
   --leather-black: #0e0805;
@@ -28,7 +28,7 @@
   --shadow: 0 16px 48px rgba(14,8,5,.14);
   --shadow-lg: 0 28px 70px rgba(14,8,5,.22);
   --shadow-gold: 0 10px 40px rgba(201,162,39,.28);
-  --font: 'Vazirmatn', system-ui, sans-serif;
+  --font: 'Estedad', system-ui, sans-serif;
   --ease: cubic-bezier(.22,1,.36,1);
   --t: .45s var(--ease);
 }
@@ -364,4 +364,95 @@ body::before{
   .hero .lead{font-size:1.05rem}
   .section{padding:4rem 0}
   .btn.outline{margin-top:.5rem}
+}
+
+
+/* =========================================================
+   ارتقای تایپوگرافی و منوهای چندلایه
+   ========================================================= */
+h1,h2,h3,h4,.section-title,.page-hero h1,.hero h1{
+  font-family:'Noto Naskh Arabic','Estedad',serif;
+  letter-spacing:0;
+}
+body{font-family:'Estedad',system-ui,sans-serif}
+p,li{line-height:2}
+.site-header .container{gap:1.1rem;padding:.85rem 0}
+.logo strong{font-size:1.04rem;line-height:1.8}
+.main-nav{gap:.38rem;align-items:center}
+.main-nav>a,.main-nav summary{
+  display:flex;align-items:center;gap:.45rem;
+  border:1px solid transparent;border-radius:13px;
+  padding:.62rem .9rem;color:var(--leather-dark);
+  font:700 .88rem 'Estedad',sans-serif;text-decoration:none;
+  cursor:pointer;list-style:none;white-space:nowrap;
+  transition:all .25s ease;
+}
+.main-nav summary::-webkit-details-marker{display:none}
+.main-nav summary::after{content:"⌄";font-size:1rem;color:var(--gold-muted);transition:transform .25s ease}
+.main-nav details[open]>summary::after{transform:rotate(180deg)}
+.main-nav>a:hover,.main-nav summary:hover,.main-nav details[open]>summary{
+  background:linear-gradient(135deg,#fffaf0,#f0e2c7);
+  border-color:rgba(168,139,46,.38);
+  color:var(--leather-black);box-shadow:0 5px 16px rgba(46,28,18,.09)
+}
+.main-nav .nav-home{background:linear-gradient(135deg,var(--leather-dark),var(--leather-mid));color:#fff8e9;border-color:rgba(201,162,39,.5);box-shadow:0 5px 16px rgba(14,8,5,.18)}
+.main-nav .nav-home:hover{background:linear-gradient(135deg,var(--gold-soft),var(--gold));color:var(--leather-black)}
+.nav-group{position:relative}
+.nav-panel{
+  display:none;position:absolute;top:calc(100% + .55rem);right:0;z-index:1200;
+  min-width:250px;padding:.85rem;
+  background:linear-gradient(150deg,#21140c,#382416 70%,#1a100a);
+  border:1px solid rgba(201,162,39,.7);border-radius:17px;
+  box-shadow:0 22px 55px rgba(14,8,5,.34),inset 0 0 0 1px rgba(255,255,255,.035);
+  animation:navDrop .22s ease both;
+}
+.nav-group:hover .nav-panel,.nav-group:focus-within .nav-panel,.nav-group[open] .nav-panel{display:grid;gap:.28rem}
+.nav-panel::before{content:"";position:absolute;top:-6px;right:25px;width:11px;height:11px;background:#21140c;border-top:1px solid var(--gold);border-right:1px solid var(--gold);transform:rotate(-45deg)}
+.nav-panel-title{display:block;color:var(--gold-soft);font:800 .82rem 'Estedad',sans-serif;padding:.35rem .75rem .6rem;border-bottom:1px solid rgba(201,162,39,.25);margin-bottom:.25rem}
+.nav-panel a{
+  display:flex;align-items:center;gap:.55rem;
+  padding:.63rem .78rem;border-radius:10px;
+  color:#f5ead7;text-decoration:none;font:500 .88rem 'Estedad',sans-serif;
+  transition:background .2s ease,color .2s ease,transform .2s ease
+}
+.nav-panel a::before{content:"◆";font-size:.48rem;color:var(--gold)}
+.nav-panel a:hover,.nav-panel a.active{background:rgba(201,162,39,.17);color:var(--gold-soft);transform:translateX(-3px)}
+@keyframes navDrop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.nav-toggle{
+  border:1px solid rgba(168,139,46,.55);border-radius:13px;
+  background:linear-gradient(145deg,#fffaf0,#ead9b8);color:var(--leather-dark);
+  box-shadow:0 5px 15px rgba(46,28,18,.12);font-size:1.3rem;padding:.6rem .85rem
+}
+.visitor-counter{
+  display:inline-flex;align-items:center;gap:.8rem;flex-wrap:wrap;
+  margin-top:1.6rem;padding:.8rem 1.15rem;
+  border:1px solid rgba(232,197,71,.48);border-radius:16px;
+  background:linear-gradient(120deg,rgba(255,249,237,.1),rgba(201,162,39,.1));
+  box-shadow:inset 0 0 22px rgba(201,162,39,.07),0 8px 28px rgba(0,0,0,.12);
+  color:#fff3d2
+}
+.visitor-counter-label{font-size:.78rem;color:var(--gold-soft);font-weight:600}
+.visitor-counter strong{font-size:.9rem;color:#fff9ed}
+.visitor-counter .counterapi{display:inline-flex;align-items:center;min-height:28px;color:var(--gold-bright);font-size:1.2rem;font-weight:900;direction:ltr}
+@media(max-width:1100px) and (min-width:901px){
+  .site-header .container{align-items:flex-start;flex-direction:column;gap:.55rem}
+  .main-nav{width:100%;flex-wrap:wrap}
+}
+@media(max-width:900px){
+  .site-header .container{flex-direction:row;align-items:center;flex-wrap:wrap}
+  .main-nav{display:none;width:100%;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:.55rem;padding:.85rem 0 .3rem;border-top:1px solid var(--border);margin-top:.5rem}
+  .main-nav.open{display:grid}
+  .main-nav>a,.main-nav summary{width:100%;justify-content:space-between;padding:.72rem .8rem;background:rgba(255,253,249,.86);border-color:var(--border);white-space:normal}
+  .main-nav .nav-home{background:linear-gradient(135deg,var(--leather-dark),var(--leather-mid));color:#fff8e9}
+  .nav-group{width:100%;min-width:0}
+  .nav-panel{position:static;min-width:0;width:100%;margin-top:.35rem;border-radius:12px;padding:.55rem;box-shadow:0 10px 22px rgba(14,8,5,.2)}
+  .nav-panel::before{display:none}
+  .nav-group:hover .nav-panel,.nav-group:focus-within .nav-panel{display:none}
+  .nav-group[open] .nav-panel{display:grid}
+  .nav-panel a{font-size:.82rem;padding:.55rem}
+}
+@media(max-width:480px){
+  .main-nav{grid-template-columns:1fr}
+  .visitor-counter{gap:.45rem;padding:.7rem .85rem}
+  .visitor-counter strong{font-size:.82rem}
 }

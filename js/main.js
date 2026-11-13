@@ -6,7 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const href = link.getAttribute('href');
     if (href === path || (path === '' && href === 'index.html')) {
       link.classList.add('active');
+      const parentGroup = link.closest('.nav-group');
+      if (parentGroup) parentGroup.open = true;
     }
+  });
+
+  // Keep dropdown navigation tidy: only one group remains expanded.
+  document.querySelectorAll('.main-nav .nav-group').forEach(group => {
+    group.addEventListener('toggle', () => {
+      if (group.open) {
+        document.querySelectorAll('.main-nav .nav-group').forEach(other => {
+          if (other !== group) other.open = false;
+        });
+      }
+    });
   });
 
   // ---------- Smooth scroll for anchors ----------
@@ -80,6 +93,27 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => el.classList.add('visible'));
   }
 });
+// One shared public counter for the whole site; hidden on inner pages.
+(function initSiteCounter() {
+  const namespace = 'deepdesigntechnology-design.github.io';
+  const existing = document.querySelector('.counterapi');
+  if (!existing) {
+    const tracker = document.createElement('div');
+    tracker.className = 'counterapi';
+    tracker.setAttribute('ns', namespace);
+    tracker.setAttribute('key', 'site-total');
+    tracker.setAttribute('action', 'view');
+    tracker.setAttribute('invisible', 'true');
+    tracker.setAttribute('aria-hidden', 'true');
+    tracker.style.display = 'none';
+    document.body.appendChild(tracker);
+  }
+  const counterScript = document.createElement('script');
+  counterScript.src = 'https://counterapi.com/c.js?ns=' + encodeURIComponent(namespace);
+  counterScript.async = true;
+  document.head.appendChild(counterScript);
+})();
+
 // Google Analytics 4
 (function() {
   var script = document.createElement('script');

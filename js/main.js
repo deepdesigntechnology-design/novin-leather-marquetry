@@ -93,24 +93,29 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach(el => el.classList.add('visible'));
   }
 });
-// One shared public counter for the whole site; hidden on inner pages.
+// One shared public page-view counter for the entire site.
 (function initSiteCounter() {
   const namespace = 'deepdesigntechnology-design.github.io';
-  const existing = document.querySelector('.counterapi');
-  if (!existing) {
-    const tracker = document.createElement('div');
-    tracker.className = 'counterapi';
-    tracker.setAttribute('ns', namespace);
-    tracker.setAttribute('key', 'site-total');
-    tracker.setAttribute('action', 'view');
-    tracker.setAttribute('invisible', 'true');
-    tracker.setAttribute('aria-hidden', 'true');
-    tracker.style.display = 'none';
-    document.body.appendChild(tracker);
-  }
+  const key = 'site-total';
+  window.updateSiteViewCounter = function (result) {
+    const target = document.querySelector('[data-site-views]');
+    if (!target) return;
+    if (result && typeof result.value !== 'undefined') {
+      target.textContent = Number(result.value).toLocaleString('fa-IR');
+      target.setAttribute('aria-label', 'تعداد بازدید ثبت‌شده: ' + result.value);
+    } else {
+      target.textContent = 'فعلاً در دسترس نیست';
+    }
+  };
   const counterScript = document.createElement('script');
-  counterScript.src = 'https://counterapi.com/c.js?ns=' + encodeURIComponent(namespace);
+  counterScript.src = 'https://counterapi.com/api/' +
+    encodeURIComponent(namespace) + '/view/' +
+    encodeURIComponent(key) + '?callback=updateSiteViewCounter';
   counterScript.async = true;
+  counterScript.onerror = function () {
+    const target = document.querySelector('[data-site-views]');
+    if (target) target.textContent = 'فعلاً در دسترس نیست';
+  };
   document.head.appendChild(counterScript);
 })();
 
